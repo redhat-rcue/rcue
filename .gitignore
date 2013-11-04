@@ -2,4 +2,14 @@
 *.sublime-workspace
 
 *.sublime-project
+
+# Ignore vim files
+*.swp
+*.swn
+*.swo
+
+# Ignore Bower installed libraries
 components/
+
+# Ignore local nodejs packages
+node_modules/
