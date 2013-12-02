@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 rcue-login"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="rcue-login">
+<!--<![endif]-->
+  <head>
+    <title>Login - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../components/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body class="">
+    <div id="rcue-login-screen">
+      <img id="logo" src="../dist/img/login-screen-logo.png">
+      <form>
+        <fieldset>
+          <legend><img src="../dist/img/RH-Product-Name.png"></legend>
+          <p>
+            <label>Username</label>
+            <input type="text" name="username">
+          </p>
+          <p>
+            <label>Password</label>
+            <input type="password" name="password">
+          </p>
+          <small>
+            <input type="checkbox">Remember Username<br>
+             Forgot <a href="#">Username</a> or <a href="#">Password</a>?
+          </small>
+          <input type="button" value="Log In">
+        </fieldset>
+        <aside>
+          <p><strong>Domain:</strong> 10.0.0.1</p>
+          <p><strong>Zone:</strong> Live</p>
+          <p><strong>Appliance:</strong> Yep</p>
+        </aside>
+      </form>
+    </div>
+  </body>
+</html>
