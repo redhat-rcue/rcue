@@ -7738,7 +7738,11 @@ label {
 }
 .rcueicon-layered .rcueicon:first-child {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
+}
+.rcueicon-layered .rcueicon:first-child + .rcueicon {
+  position: relative;
+  z-index: 2;
 }
 .rcueicon-warning-exclamation:before {
   content: "\e60d";
