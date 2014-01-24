@@ -9003,6 +9003,7 @@ fieldset[disabled] .pagination > li > span.active {
 }
 .nav-tabs > li > a {
   color: #4d5258;
+  margin-right: -1px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -9010,6 +9011,7 @@ fieldset[disabled] .pagination > li > span.active {
 .nav-tabs > li > a:focus,
 .nav-tabs > li > a:hover {
   background: transparent;
+  border-color: #e9e8e8;
   color: #222222;
 }
 .nav-tabs > li > .dropdown-menu {
@@ -9017,7 +9019,7 @@ fieldset[disabled] .pagination > li > span.active {
   border-color: #e9e8e8;
 }
 .nav-tabs > li > .dropdown-menu.pull-right {
-  right: 2px;
+  right: -1px;
 }
 .nav-tabs .open > a,
 .nav-tabs .open > a:hover,
@@ -9026,24 +9028,24 @@ fieldset[disabled] .pagination > li > span.active {
   border-color: #e9e8e8;
 }
 @media (min-width: 768px) {
-  .nav-tabs-rcue.nav-justified {
+  .nav-tabs-pf.nav-justified {
     border-bottom: 1px solid #e9e8e8;
   }
 }
-.nav-tabs-rcue.nav-justified > li:first-child > a {
+.nav-tabs-pf.nav-justified > li:first-child > a {
   padding-left: 15px;
 }
-.nav-tabs-rcue.nav-justified > li > a {
+.nav-tabs-pf.nav-justified > li > a {
   border-bottom: 0;
 }
-.nav-tabs-rcue.nav-justified > li > a:before {
+.nav-tabs-pf.nav-justified > li > a:before {
   left: 0 !important;
   right: 0 !important;
 }
-.nav-tabs-rcue > li {
+.nav-tabs-pf > li {
   margin-bottom: 0;
 }
-.nav-tabs-rcue > li.active > a:before {
+.nav-tabs-pf > li.active > a:before {
   background: #0099d3;
   bottom: -1px;
   content: '';
@@ -9053,36 +9055,36 @@ fieldset[disabled] .pagination > li > span.active {
   position: absolute;
   right: 15px;
 }
-.nav-tabs-rcue > li.active > a,
-.nav-tabs-rcue > li.active > a:active,
-.nav-tabs-rcue > li.active > a:focus,
-.nav-tabs-rcue > li.active > a:hover {
+.nav-tabs-pf > li.active > a,
+.nav-tabs-pf > li.active > a:active,
+.nav-tabs-pf > li.active > a:focus,
+.nav-tabs-pf > li.active > a:hover {
   background-color: transparent;
   border: 0 !important;
   color: #0099d3;
 }
-.nav-tabs-rcue > li.active > a:before,
-.nav-tabs-rcue > li.active > a:active:before,
-.nav-tabs-rcue > li.active > a:focus:before,
-.nav-tabs-rcue > li.active > a:hover:before {
+.nav-tabs-pf > li.active > a:before,
+.nav-tabs-pf > li.active > a:active:before,
+.nav-tabs-pf > li.active > a:focus:before,
+.nav-tabs-pf > li.active > a:hover:before {
   background: #0099d3;
 }
-.nav-tabs-rcue > li:first-child > a {
+.nav-tabs-pf > li:first-child > a {
   padding-left: 0;
 }
-.nav-tabs-rcue > li:first-child > a:before {
+.nav-tabs-pf > li:first-child > a:before {
   left: 0 !important;
 }
-.nav-tabs-rcue > li > a {
+.nav-tabs-pf > li > a {
   border: 0;
   line-height: 1;
   margin-right: 0;
   padding-bottom: 10px;
   padding-top: 10px;
 }
-.nav-tabs-rcue > li > a:active:before,
-.nav-tabs-rcue > li > a:focus:before,
-.nav-tabs-rcue > li > a:hover:before {
+.nav-tabs-pf > li > a:active:before,
+.nav-tabs-pf > li > a:focus:before,
+.nav-tabs-pf > li > a:hover:before {
   background: #aaaaaa;
   bottom: -1px;
   content: '';
@@ -9092,17 +9094,17 @@ fieldset[disabled] .pagination > li > span.active {
   position: absolute;
   right: 15px;
 }
-.nav-tabs-rcue > li > .dropdown-menu {
+.nav-tabs-pf > li > .dropdown-menu {
   left: 15px;
   margin-top: 1px;
 }
-.nav-tabs-rcue > li > .dropdown-menu.pull-right {
+.nav-tabs-pf > li > .dropdown-menu.pull-right {
   left: auto;
   right: 15px;
 }
-.nav-tabs-rcue .open > a,
-.nav-tabs-rcue .open > a:hover,
-.nav-tabs-rcue .open > a:focus {
+.nav-tabs-pf .open > a,
+.nav-tabs-pf .open > a:hover,
+.nav-tabs-pf .open > a:focus {
   background-color: transparent;
 }
 .tooltip {
