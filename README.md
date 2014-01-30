@@ -2,7 +2,7 @@
 
 The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
-This reference implementation of RCUE is based on [Bootstrap v3.0.X](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
+This reference implementation of RCUE is based on [PatternFly](https://site-patternfly.rhcloud.com/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
 
 ## Dependencies
 
@@ -63,10 +63,6 @@ In development, styling is written and managed through multiple lesscss files. I
     grunt build
 
 This task will compile and minify the lesscss files into a single CSS file located at `dist/css/rcue.min.css`.
-
-### RCUEIcons Font
-
-RCUEIcons font is generated using [IcoMoon](http://icomoon.io/app).  [Load](http://icomoon.io/#docs/save-load) `RCUEIcons-webfont.json` as a new project in IcoMoon and update as necessary.  Please commit the updated `RCUEIcons-webfont.json` file in addition to the updated font files and supporting LESS/CSS changes.
 
 ## Tests
 

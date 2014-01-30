@@ -26,10 +26,15 @@
             <h1>Info Tip</h1>
           </div>
           <div class="alert alert-warning">
-            These examples are included for development testing purposes.  For official documentation, see <a href="http://rcue-uxd.itos.redhat.com">http://rcue-uxd.itos.redhat.com</a> and <a href="http://getbootstrap.com">http://getbootstrap.com</a>.
+             <span class="pficon-layered">
+              <span class="pficon pficon-warning-triangle"></span>
+              <span class="pficon pficon-warning-exclamation"></span>
+            </span>
+            These examples are include for development testing purposes.  For official documentation, see <a href="http://site-patternfly.rhcloud.com" class="alert-link">http://site-patternfly.rhcloud.com</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
           </div>
+          <hr>
           
-          <nav class="navbar navbar-default navbar-rcue" role="navigation">
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -38,25 +43,25 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="/">
-                <img src="../dist/img/brand.svg" alt="Red Hat&reg; Common User Experience" />
+                <img src="../dist/img/brand.svg" alt="PatternFly" />
               </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">
               <ul class="nav navbar-nav navbar-utility">
                 <li class="dropdown">
                   <a href="#" data-toggle="dropdown">
-                    <span class="rcueicon rcueicon-info"></span>
+                    <span class="pficon pficon-info"></span>
                     Messages: <strong>2</strong>
                   </a>
                   <div class="dropdown-menu infotip bottom-right">
                     <div class="arrow"></div>
                     <ul class="list-group">
                       <li class="list-group-item">
-                        <span class="i rcueicon rcueicon-info"></span>
+                        <span class="i pficon pficon-info"></span>
                         Added Datasources TestDS
                       </li>
                       <li class="list-group-item">
-                        <span class="i rcueicon rcueicon-info"></span>
+                        <span class="i pficon pficon-info"></span>
                         Modified Datasources ExampleDS
                       </li>
                     </ul>
@@ -74,10 +79,10 @@
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
-    <script src="../dist/js/rcue-util.js"></script>
+    <script src="../components/patternfly/dist/js/util.js"></script>
     <script>
       // Initialize Popovers
-      RCUE.popovers('[data-toggle=popover]')
+      PatternFly.popovers('[data-toggle=popover]')
     </script>
   </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
 <!--<![endif]-->
   <head>
-    <title>Dropdowns - Red Hat&reg; Common User Experience</title>
+    <title>Tables - Red Hat&reg; Common User Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
     <link href="tests.css" rel="stylesheet" media="screen, print">
@@ -19,16 +19,13 @@
     <!-- IE8 requires jQuery v1.x -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <!-- Bootstrap Multiselect Plugin: -->
-    <script type="text/javascript" src="../components/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
-            <h1>Dropdowns</h1>
+            <h1>Tables</h1>
           </div>
           <div class="alert alert-warning">
              <span class="pficon-layered">
@@ -38,14 +35,60 @@
             These examples are include for development testing purposes.  For official documentation, see <a href="http://site-patternfly.rhcloud.com" class="alert-link">http://site-patternfly.rhcloud.com</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
           </div>
           <hr>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="display: block; position: static; margin-bottom: 10px;">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-          </ul>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Column heading</th>
+                <th>Column heading</th>
+                <th>Column heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <td>1</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="success">
+                <td>3</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="warning">
+                <td>5</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+              <tr class="danger">
+                <td>7</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+              </tr>
+            </tbody>
+          </table>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->

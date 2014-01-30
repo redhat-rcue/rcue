@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!--[if IE 6]><html class="ie6"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
 <!--[if IE 8]><html class="ie8"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html>
 <!--<![endif]-->
   <head>
-    <title>Modals - Red Hat&reg; Common User Experience</title>
+    <title>Badges - Red Hat&reg; Common User Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
     <link href="tests.css" rel="stylesheet" media="screen, print">
@@ -16,14 +18,14 @@
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
-            <h1>Modals</h1>
+            <h1>Badges</h1>
           </div>
           <div class="alert alert-warning">
              <span class="pficon-layered">
@@ -33,27 +35,33 @@
             These examples are include for development testing purposes.  For official documentation, see <a href="http://site-patternfly.rhcloud.com" class="alert-link">http://site-patternfly.rhcloud.com</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
           </div>
           <hr>
-          <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <span class="pficon pficon-close"></span>
-                  </button>
-                  <h4 class="modal-title" id="myModalLabel">Modal Title</h4>
-                </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">
-                    Next
-                    <div class="fa fa-angle-right"></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="#">Inbox <span class="badge">42</span></a>
+          <hr>
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages <span class="badge">3</span></a></li>
+          </ul>
+          <hr>
+          <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+            <li class="active">
+              <a href="#">
+                <span class="badge pull-right">42</span>
+                Home
+              </a>
+            </li>
+            <li><a href="#">Profile</a></li>
+            <li>
+              <a href="#">
+                <span class="badge pull-right">3</span>
+                Messages
+              </a>
+            </li>
+          </ul>
+          <hr>
+          <button class="btn btn-primary" type="button">
+            Messages <span class="badge">4</span>
+          </button>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
