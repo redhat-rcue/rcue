@@ -70,7 +70,7 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Documentation
 
-See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/) and [http://getbootstrap.com/](http://getbootstrap.com/).
+See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https://site-patternfly.rhcloud.com/](https://site-patternfly.rhcloud.com/), and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ## License
 
