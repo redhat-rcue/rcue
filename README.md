@@ -32,6 +32,10 @@ The development includes the use of a number of helpful tasks. In order to setup
 
 This will install all necessary development packages into `node_modules/`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the master CSS file.
 
+Additionally you may need to install the grunt command line utility.  To do this run:
+
+    npm install -g grunt-cli
+
 ### Live Reload Server
 
 A local development server can be quickly fired up by using the Gruntjs server task:
