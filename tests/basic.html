@@ -2,7 +2,7 @@
 <!--[if IE 8]><html class="ie8"><![endif]--> 
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
   <head>
-    <title>Tab - Red Hat&reg; Common User Experience</title>
+    <title>Basic - Red Hat&reg; Common User Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,14 +19,7 @@
     <script>
       // Initialize Datatables
       $(document).ready( function() {
-        $('.datatable').dataTable({
-          "fnDrawCallback": function( oSettings ) {
-            // if .sidebar-pf exists, call sidebar() after the data table is drawn
-            if ($('.sidebar-pf').length > 0) {
-              sidebar();
-            }
-          }
-        });
+        $('.datatable').dataTable();
       });
     </script>
   </head>
@@ -101,10 +94,10 @@
           <li>
             <a href="form.html">Form</a>
           </li>
-          <li class="active">
+          <li>
             <a href="tab.html">Tab</a>
           </li>
-          <li>
+          <li class="active">
             <a href="basic.html">Basic</a>
           </li>
           <li>
@@ -118,17 +111,12 @@
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-8 col-md-9 col-sm-push-4 col-md-push-3">
+        <div class="col-md-12">
           <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li>Tab</li>
+            <li>Basic</li>
           </ol>
-          <h1>Tab</h1>
-          <ul class="nav nav-tabs nav-tabs-pf">
-            <li class="active"><a href="#">Adipiscing elit</a></li>
-            <li><a href="#">Duis</a></li>
-            <li><a href="#">Pellentesque</a></li>
-          </ul>
+          <h1>Basic</h1>
           <table class="datatable table table-striped table-bordered">
             <thead>
               <tr>
@@ -549,13 +537,6 @@
             </tbody>
           </table>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget eros tincidunt, semper ante nec, dapibus ante.</p>
-        </div><!-- /col -->
-        <div class="col-sm-4 col-md-3 col-sm-pull-8 col-md-pull-9 sidebar-pf sidebar-pf-left">
-          <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">Dolor sit amet</a></li>
-            <li><a href="#">Consectetur</a></li>
-          </ul>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
