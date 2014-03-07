@@ -26,7 +26,7 @@ At this point, you should now have a top level components/ folder with all depen
 
 #### Keeping Bower Components Updated
 
-Anytime you pull a new version of PatternFly, make sure you also run
+Anytime you pull a new version of RCUE, make sure you also run
 
     bower update
 
