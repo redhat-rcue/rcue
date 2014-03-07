@@ -24,6 +24,14 @@ Now that Bower is available, we can install the required development components:
 
 At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to RCUE itself, you're done.  Celebrate by working on integrating RCUE and its dependencies in your app!
 
+#### Keeping Bower Components Updated
+
+Anytime you pull a new version of PatternFly, make sure you also run
+
+    bower update
+
+so you get the latest version of the components specified in bower.json.
+
 ### Install Development Dependencies
 
 The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`. To do this run:
