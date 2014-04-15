@@ -8781,6 +8781,7 @@ h6 .label {
   }
   .navbar-pf .navbar-utility {
     border-bottom: 0;
+    font-size: 11px;
     position: absolute;
     right: 0;
     top: 0;
