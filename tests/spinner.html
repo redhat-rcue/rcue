@@ -5,7 +5,7 @@
 <html>
 <!--<![endif]-->
   <head>
-    <title>Dropdowns - Red Hat&reg; Common User Experience</title>
+    <title>Spinner - Red Hat&reg; Common User Experience</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
     <link href="tests.css" rel="stylesheet" media="screen, print">
@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
-            <h1>Dropdowns</h1>
+            <h1>Spinner</h1>
           </div>
           <div class="alert alert-warning">
              <span class="pficon-layered">
@@ -35,14 +35,32 @@
             These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
           </div>
           <hr>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="display: block; position: static; margin-bottom: 10px;">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-          </ul>
+          <div class="spinner"></div>
+          <h2>Sizes</h2>
+          <div class="spinner spinner-lg"></div>
+          <div class="spinner"></div>
+          <div class="spinner spinner-sm"></div>
+          <div class="spinner spinner-xs"></div>
+          <h2>Inline</h2>
+          <h1>
+            <div class="spinner spinner-lg spinner-inline"></div>
+            Inside an &lt;h1&gt;
+          </h1>
+          <h2>
+            <div class="spinner spinner-inline"></div>
+            Inside an &lt;h2&gt;
+          </h2>
+          <h3>
+            <div class="spinner spinner-sm spinner-inline"></div>
+            Inside an &lt;h3&gt;
+          </h3>
+          <p>
+            <div class="spinner spinner-xs spinner-inline"></div>
+            Inside a &lt;p&gt;
+          </p>
+          <p class="text-info">
+            <strong>Note:</strong>  IE8 and IE9 require a conditional class on &lt;html&gt; in order to display an animated gif fallback as they don't support CSS animation.  View source on this page and see lines 2-6.
+          </p>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
