@@ -7713,6 +7713,7 @@ button.close {
 .treeview .list-group-item.node-selected {
   background: #0099d3 !important;
   border-color: #0076b7 !important;
+  color: #ffffff !important;
 }
 .treeview span.icon {
   display: inline-block;
