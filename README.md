@@ -4,33 +4,18 @@ The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) pr
 
 This reference implementation of RCUE is based on [PatternFly](https://www.patternfly.org/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
 
-## Dependencies
-
-RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".
-
 ## Development
 
 Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
 
-### Install Bower Components
+### Install Bower
 
 After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
 
     npm install -g bower
 
-Now that Bower is available, we can install the required development components:
-
-    bower install
-
+Bower is used to install and update PatternFly's dependencies.
 At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to RCUE itself, you're done.  Celebrate by working on integrating RCUE and its dependencies in your app!
-
-#### Keeping Bower Components Updated
-
-Anytime you pull a new version of RCUE, make sure you also run
-
-    bower update
-
-so you get the latest version of the components specified in bower.json.
 
 ### Install Development Dependencies
 
