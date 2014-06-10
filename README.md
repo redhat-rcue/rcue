@@ -14,6 +14,8 @@ After ensuring nodejs and npm are available, install [Bower](http://bower.io/) g
 
     npm install -g bower
 
+Bower is used to install and update PatternFly's dependencies.
+
 ### Install Development Dependencies
 
 The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`. To do this run:
