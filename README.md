@@ -14,9 +14,6 @@ After ensuring nodejs and npm are available, install [Bower](http://bower.io/) g
 
     npm install -g bower
 
-Bower is used to install and update PatternFly's dependencies.
-At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to RCUE itself, you're done.  Celebrate by working on integrating RCUE and its dependencies in your app!
-
 ### Install Development Dependencies
 
 The development includes the use of a number of helpful tasks. In order to setup your development environment to allow running of these tasks, you need to install the local nodejs packages declared in `package.json`. To do this run:
