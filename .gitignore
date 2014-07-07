@@ -15,3 +15,10 @@ node_modules/
 nodevars.bat
 npm
 npm.cmd
+
+# Ignore build
+build/
+
+# Ignore output spec file
+rcue.spec
+
