@@ -32,8 +32,6 @@ all:	rcue.spec
 	sed -i "s#../../components/patternfly/dist/fonts#../fonts#g" \
 		build/css/rcue*.css \
 		$(NULL)
-	mv build/css/rcue.css build/css/styles.css
-	mv build/css/rcue.min.css build/css/styles.min.css
 
 clean:
 	rm -rf build
