@@ -47,11 +47,12 @@ install:	all
 
 .PHONY:	rcue.spec.in
 dist:	rcue.spec
-	git ls-files | tar --files-from /proc/self/fd/0 \
-		--xform 's#^#$(PACKAGE_NAME)-$(PACKAGE_VERSION)/#' \
-		-czf "$(PACKAGE_NAME)-$(PACKAGE_VERSION).tar.gz" \
-		rcue.spec \
-		$(NULL)
+	TMP="$$(mktemp -d)" && mkdir "$${TMP}/$(PACKAGE_NAME)-$(PACKAGE_VERSION)" && \
+		git ls-files | \
+		tar --files-from /proc/self/fd/0 -c rcue.spec | \
+		tar -C "$${TMP}/$(PACKAGE_NAME)-$(PACKAGE_VERSION)" -x && \
+		tar -C "$${TMP}" -czf "$(PACKAGE_NAME)-$(PACKAGE_VERSION).tar.gz" "$(PACKAGE_NAME)-$(PACKAGE_VERSION)"; \
+		rm -fr "$${TMP}"
 
 .in:
 	sed \
