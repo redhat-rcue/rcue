@@ -10,6 +10,10 @@ PatternFly can be installed and managed through [Bower](http://bower.io/). To do
 bower install patternfly
 ```
 
+## RPM
+
+PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly1/.
+
 ## Development
 
 Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
@@ -76,7 +80,7 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 ## Release
 
-The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. **Note:**  also update the version number in `package.json` so it stays in sync.
+The PatternFly library is released through the Bower package manager. This package manager determines available versions and installs based upon git tags. To release a new version version of PatternFly the version listed in `bower.json` needs to be updated and the repository tagged and pushed upstream. **Note:**  also update the version number in `package.json` and `MAKEFILE` so they stay in sync.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
