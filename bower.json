@@ -4,6 +4,9 @@
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "http://rcue-uxd.itos.redhat.com/",
+  "main": [
+    "dist/css/rcue.css"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
