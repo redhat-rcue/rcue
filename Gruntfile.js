@@ -59,14 +59,30 @@ module.exports = function (grunt) {
                 }
             }
         },
-    	watch: {
+        uglify: {
+          options: {
+            mangle: false
+          },
+          production: {
+            files: {
+              'dist/js/offcanvas.min.js': ['dist/js/offcanvas.js'],
+              'dist/js/navigation.min.js': ['dist/js/navigation.js']
+            }
+          }
+        },
+        watch: {
             css: {
                 files: 'less/*.less',
-                tasks: ['less'],
+                tasks: ['less']
+            },
+            js: {
+                files: ['dist/js/offcanvas.js', 'dist/js/navigation.js'],
+                tasks: ['uglify']
             },
             livereload: {
                 files: [
                     'dist/css/*.css',
+                    'dist/js/*.js',
                     'tests/*.html'
                 ]
             },
@@ -77,7 +93,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', [
-        'less'
+        'less',
+        'uglify'
     ]);
 
     grunt.registerTask('server', [

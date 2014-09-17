@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CloudForms Management Engine: Dashboard</title>
+    <link href="cf-login_files/jquery-ui-1.css" media="screen" rel="stylesheet" type="text/css">
+    <!--[if IE 8]>
+      <html class="ie8">
+        <script>
+          document.createElement('header');
+          document.createElement('nav');
+          document.createElement('section');
+          document.createElement('article');
+          document.createElement('aside');
+          document.createElement('footer');
+        </script>
+    <![endif]-->
+    <link href="cf-login_files/login.css" media="screen" rel="stylesheet" type="text/css">
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="iq/bjo9szH6FvtVZrwBMReEtI9TjYEA+kWhORl5hKuU=" name="csrf-token">
+
+  </head>
+
+  <body>
+      <div class="" id="rcue-login-screen">
+<img id="logo" src="cf-login_files/login-screen-logo.png">
+<div class="form">
+ 
+<div id="notification" style="display: none;">
+	<div id="outer">
+		<div id="inner">
+		    <div id="spinner_div"></div>
+		</div>
+	</div>
+</div>
+
+<div id="flash_div" style="display:none">
+
+</div>
+<fieldset>
+<legend>
+<img src="cf-login_files/RH-Product-Name.png">
+</legend>
+<div id="login_div">
+<p>
+<label>Username</label>
+<input id="user_name" name="user_name" onkeypress="if(miqEnterPressed(event)) miqAjaxAuth();" type="text">
+
+</p>
+<p>
+<label>Password</label>
+<input autocomplete="off" id="user_password" name="user_password" onkeypress="if(miqEnterPressed(event)) miqAjaxAuth();" type="password">
+</p>
+<input value="Firefox" id="browser_name" name="browser_name" type="hidden">
+<input value="32" id="browser_version" name="browser_version" type="hidden">
+<input value="Mac" id="browser_os" name="browser_os" type="hidden">
+<input value="4" id="user_TZO" name="user_TZO" type="hidden">
+</div>
+<ul class="login_buttons">
+<li>
+<a href="https://cf-cfme-rhev.refarch.bos.redhat.com/dashboard/authenticate?button=login" class="button" data-miq_sparkle_on="true" data-remote="true" data-submit="login_div" id="login" title="Login">Log In</a>
+</li>
+</ul>
+</fieldset>
+<aside>
+<p>
+Region:
+<span>
+Region 0
+</span>
+</p>
+<p>
+Zone:
+<span>
+default
+</span>
+</p>
+<p>
+Appliance:
+<span>
+cf-cfme-rhev
+</span>
+</p>
+<p class="message">
+</p>
+</aside>
+</div>
+</div>
+
+
+  
+
+</body></html>

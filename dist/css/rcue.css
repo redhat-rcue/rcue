@@ -10108,3 +10108,281 @@ h2,
 /* RCUE overrides */
 /* Bootstrap overrides */
 /* RCUE-specific */
+.application {
+  bottom: 0;
+  left: 20px;
+  -webkit-overflow-scrolling: touch;
+  /* for iOS */
+  overflow-y: scroll;
+  /* for iOS */
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.application iframe {
+  border: 0;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.launcher,
+.launcher body {
+  height: 100%;
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
+}
+.navigation {
+  background: #e4e4e4;
+  color: #333;
+  min-height: 100%;
+}
+.navigation .navbar-toggle {
+  background: #dfdfdf;
+  border: 0;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
+  color: #222;
+  display: block;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  z-index: 100;
+}
+.navigation .navbar-toggle:hover {
+  background: #d1d1d1;
+  color: #000;
+}
+.active .navigation .navbar-toggle {
+  background: transparent;
+}
+.active .navigation .navbar-toggle:hover {
+  background: #d2d2d2;
+  background: rgba(210, 210, 210, 0.4);
+}
+.active .navigation .navbar-toggle:hover .fa-arrow-right {
+  background: transparent;
+  box-shadow: none;
+}
+.active .navigation .navbar-toggle .fa-arrow-right {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 3px;
+}
+.active .navigation .navbar-toggle .fa-arrow-right:before {
+  content: "\f060";
+}
+.navigation .panel-body {
+  padding: 6px 0;
+}
+.navigation .panel-body .nav-pills > li.active > a {
+  background: #0099d3 !important;
+  border-color: #0076b7 !important;
+  color: #fff;
+}
+@media (min-width: 767px) {
+  .navigation .panel-body .nav-pills > li.active > a:after {
+    content: "\f105";
+    font-family: "FontAwesome";
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 1px;
+  }
+}
+.navigation .panel-body .nav-pills > li > a {
+  border-radius: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  border-top: 1px solid transparent;
+  color: #333333;
+  overflow: hidden;
+  padding: 1px 20px 1px 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navigation .panel-body .nav-pills > li > a:hover {
+  background: #d4edfa;
+  border-color: #b3d3e7;
+}
+.navigation .panel-body .nav-stacked > li + li {
+  margin-top: 0;
+}
+.navigation .panel-group .panel {
+  background: #f7f7f7;
+  border-color: #ccc;
+  border-top-color: #d5d5d5;
+  border-left: 0;
+  border-right: 0;
+  overflow: visible;
+}
+.navigation .panel-group .panel-heading {
+  background-image: -webkit-linear-gradient(top, #fafafa 0%, #e0e0e0 100%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #e0e0e0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffe0e0e0', GradientType=0);
+  padding: 7px 20px;
+}
+.navigation .panel-group .panel-title {
+  position: relative;
+}
+.navigation .panel-group .panel-title:hover > .dropdown .dropdown-toggle {
+  visibility: visible;
+}
+.navigation .panel-group .panel-title > a[data-toggle] {
+  display: block;
+  float: left;
+  font-size: 12px;
+  width: 100%;
+}
+.navigation .panel-group .panel-title > a[data-toggle]:before {
+  display: inline-block;
+  float: left;
+  margin-right: 3px;
+}
+.navigation .panel-group .panel-title > a[data-toggle].collapsed:before {
+  margin-left: 3px;
+}
+.navigation .panel-group .panel-title > a[data-toggle] > span {
+  display: block;
+  float: left;
+  line-height: 14px;
+  overflow: hidden;
+}
+.navigation .panel-group .panel-title > a[data-toggle] > span.group {
+  max-width: 215px;
+  margin-right: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navigation .panel-group .panel-title > a[data-toggle] > span.count {
+  font-weight: 300;
+}
+.navigation .panel-group .panel-title .dropdown {
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+.navigation .panel-group .panel-title .dropdown .dropdown-menu {
+  margin-top: -2px;
+}
+.navigation .panel-group .panel-title .dropdown .dropdown-toggle {
+  color: inherit;
+  height: 29px;
+  visibility: hidden;
+}
+.navigation .panel-group .panel-title .dropdown .dropdown-toggle:hover {
+  color: #0099d3;
+}
+.navigation .panel-group .panel-title .dropdown.open .dropdown-toggle {
+  color: #0099d3;
+  visibility: visible;
+}
+.navigation .popover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  font-size: 11px;
+}
+.navigation .popover dl {
+  margin-bottom: 0;
+}
+.navigation .popover dl dd {
+  margin-left: 5px;
+}
+.navigation .popover dl dt {
+  font-weight: 600;
+}
+.nav-launcher p {
+  margin: 0 20px 5px;
+}
+.nav-launcher-brand {
+  background-image: -webkit-linear-gradient(top, #fafafa 0%, #e0e0e0 100%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #e0e0e0 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffe0e0e0', GradientType=0);
+  border-bottom: 1px solid #ccc;
+  padding: 7px 20px 8px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .nav-launcher-brand {
+    padding-bottom: 18px;
+    padding-top: 17px;
+  }
+}
+.nav-launcher-brand:after {
+  background: #ededed;
+  bottom: -2px;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.nav-launcher-brand img {
+  width: 174px;
+}
+@media (min-width: 768px) {
+  .nav-launcher-brand img {
+    width: 280px;
+  }
+}
+.nav-launcher-config {
+  margin-top: 40px;
+}
+.nav-launcher-filters {
+  padding: 15px 20px;
+}
+.nav-launcher-filters .bootstrap-select {
+  float: left !important;
+  margin-bottom: 0 !important;
+  margin-right: 5px;
+  width: auto !important;
+}
+.nav-launcher-filters .bootstrap-select.btn-group .dropdown-menu {
+  width: 250px;
+}
+.nav-launcher-filters .form-group {
+  margin-bottom: 0;
+}
+.nav-launcher-filters .selectpicker {
+  box-shadow: none;
+  max-width: 90px;
+  width: auto;
+}
+/* Offcanvas */
+.offcanvas {
+  min-height: 100%;
+  position: relative;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.offcanvas-left {
+  left: 0;
+}
+.offcanvas-left.active {
+  left: 300px;
+}
+.offcanvas-left .offcanvas-sidebar {
+  left: -300px;
+}
+.offcanvas-right {
+  right: 0;
+}
+.offcanvas-right.active {
+  right: 320px;
+}
+.offcanvas-right .offcanvas-sidebar {
+  right: -320px;
+}
+.offcanvas-sidebar {
+  position: absolute;
+  top: 0;
+  width: 320px;
+}

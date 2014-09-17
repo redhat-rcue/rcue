@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="launcher">
+<!--<![endif]-->
+  <head>
+    <title>Application Launcher - Red Hat&reg; Common User Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/rcue.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/patternfly/components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="../components/patternfly/components/jquery/jquery.min.js"></script>
+    <script src="../components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../components/patternfly/dist/js/patternfly.min.js"></script>
+    <script src="../dist/js/offcanvas.min.js"></script>
+    <script src="../components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="../dist/js/navigation.min.js"></script>
+  </head>
+  <body>
+    <div class="offcanvas offcanvas-left">
+      <div class="application">
+        <iframe src="launcher/cf-login.html" name="application" id="application"></iframe>
+      </div><!-- /application -->
+      <div class="offcanvas-sidebar navigation" id="rcue-switcher" role="navigation">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navigation" data-canvas="body">
+          <i class="fa fa-arrow-right"></i>
+          <span class="sr-only">Toggle</span>
+        </button>
+        <nav class="nav-launcher" role="navigation">
+          <div class="nav-launcher-brand">
+            <img src="../dist/img/redhat-app-launcher.svg" alt="Red Hat Management" />
+          </div>
+          <div class="nav-launcher-filters">
+            <form role="form" class="search-pf has-button">
+              <select class="selectpicker">
+                <option>All</option>
+                <option>Red Hat CloudForms</option>
+                <option>Red Hat Satellite</option>
+                <option>Red Hat Enterprise Virtualization</option>
+                <option>Red Hat Enterprise Linux OpenStack</option>
+                <option>Red Hat Storage</option>
+              </select>
+              <div class="form-group has-clear">
+                <div class="search-pf-input-group">
+                  <label for="search1" class="sr-only">Search</label>
+                  <input id="search1" type="search" class="form-control" placeholder="Search">
+                  <button type="button" class="clear" aria-hidden="true" style="display: none;"><span class="pficon pficon-close"></span></button>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="nav-launcher-accordion panel-group" id="accordion">
+            <p><a href="#">View Product Name / Hostname</a>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseZero">
+                    <span class="group">Most Recent</span> <span class="count">(5)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="collapseZero" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                      <a href="launcher/cf-login.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 1
+                      </a>
+                    </li>
+                    <li><a href="launcher/sat2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 2
+                      </a>
+                    </li>
+                    <li><a href="launcher/sat3.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost3</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 3</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 3</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 3
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhos-dashboard.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat OpenStack</dd>
+                            <dt>Hostname</dt>
+                            <dd>oshost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>OpenStack 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat OpenStack, OpenStack 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        OpenStack 1
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhev2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 2
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                    <span class="group">Red Hat CloudForms</span> <span class="count">(4)</span>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Nickname</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove Tag</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                      <a href="launcher/cf-login.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="launcher/cf2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="launcher/cf3.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost3</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 3</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 3</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 3
+                      </a>
+                    </li>
+                    <li>
+                      <a href="launcher/cf4.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost4</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 4</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 4</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 4
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                    <span class="group">Red Hat Satellite </span> <span class="count">(4)</span>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu2">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Nickname</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove Tag</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                      <li><a href="launcher/sat1.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 1
+                      </a>
+                    </li>
+                    <li><a href="launcher/sat2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 2
+                      </a>
+                    </li>
+                    <li><a href="launcher/sat3.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost3</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 3</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 3</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 3
+                      </a>
+                    </li>
+                    <li><a href="launcher/sat4.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Satellite</dd>
+                            <dt>Hostname</dt>
+                            <dd>sathost4</dd>
+                            <dt>Nickname</dt>
+                            <dd>Satellite 4</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Satellite, Satellite 4</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        Satellite 4
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                    <span class="group">Red Hat Enterprise Virtualization </span> <span class="count">(3)</span>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu3">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Nickname</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove Tag</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                      <li><a href="launcher/rhev1.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 1
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhev2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 2
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhev3.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost3</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 3</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 3</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
+                    <span class="group">Red Hat Enterprise Linux OpenStack</span> <span class="count">(2)</span>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu4">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Nickname</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove Tag</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                      <li><a href="launcher/rhos-dashboard.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat OpenStack</dd>
+                            <dt>Hostname</dt>
+                            <dd>oshost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>OpenStack 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat OpenStack, OpenStack 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        OpenStack 1
+                      </a>
+                    </li> 
+                    <li><a href="launcher/rhos2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat OpenStack</dd>
+                            <dt>Hostname</dt>
+                            <dd>oshost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>OpenStack 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat OpenStack, OpenStack 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        OpenStack 2
+                      </a>
+                    </li> 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed">
+                    <span class="group">Red Hat Storage</span> <span class="count">(1)</span>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu5">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Nickname</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Tag</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove Tag</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="https://access.redhat.com/products/red-hat-storage/" target="application">Storage 1</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" class="collapsed">
+                    <span class="group">Favorites </span> <span class="count">(3)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="launcher/rhos-dashboard.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat OpenStack</dd>
+                            <dt>Hostname</dt>
+                            <dd>oshost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>OpenStack 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat OpenStack, OpenStack 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        OpenStack 1
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhev1.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost1</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 1</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 1</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 1
+                      </a>
+                    </li>
+                    <li>
+                      <a href="launcher/cf2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 2
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" class="collapsed">
+                    <span class="group">Untagged </span> <span class="count">(3)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="launcher/rhos2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat OpenStack</dd>
+                            <dt>Hostname</dt>
+                            <dd>oshost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>OpenStack 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat OpenStack, OpenStack 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        OpenStack 2
+                      </a>
+                    </li>
+                    <li><a href="launcher/rhev2.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat Enterprise Virtualization</dd>
+                            <dt>Hostname</dt>
+                            <dd>rhevhost2</dd>
+                            <dt>Nickname</dt>
+                            <dd>Enterprise Virtualization 2</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat Enterprise Virtualization, Enterprise Virtualization 2</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        RHEV 2
+                      </a>
+                    </li>
+                    <li>
+                      <a href="launcher/cf3.html" target="application" data-toggle="popover"
+                        data-content=
+                          '
+                          <dl>
+                            <dt>Product Name</dt>
+                            <dd>Red Hat CloudForms</dd>
+                            <dt>Hostname</dt>
+                            <dd>cfhost3</dd>
+                            <dt>Nickname</dt>
+                            <dd>CloudForms 3</dd>
+                            <dt>Tags</dt>
+                            <dd>Red Hat CloudForms, CloudForms 3</dd>
+                            <dt>Last Accessed Time</dt>
+                            <dd>10-1-2014 12:00 UTC</dd>
+                          </dl>
+                          '
+                        >
+                        CloudForms 3
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-launcher-config">
+            <p><a href="#">Edit AppLauncher Configuration</a></p>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
