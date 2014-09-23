@@ -18,6 +18,29 @@
       $(selector).parent('li').toggleClass('active');
     });
   }
+  navlauncherpopovers = function() {
+    //PatternFly.popovers('[data-toggle=popover]');
+    $('[data-toggle=popover]').popover({
+      'delay': {"show": "1000", "hide": "0"},
+      'html': 'true',
+      'original-title': '',
+      'placement': 'bottom',
+      'toggle': 'popover',
+      'trigger': 'hover'
+    });
+  }
+  navlaunchertoggle = function() {
+    $('.nav-launcher-toggle').on("click", function() {
+      var el = $(this);
+      if (el.text() == el.data("text-swap")) {
+        el.text(el.data("text-original"));
+      } else {
+        el.data("text-original", el.text());
+        el.text(el.data("text-swap"));
+      };
+      $('.panel-hidden, .panel-show').toggle();
+    });
+  }
   navlaunchersearch = function() {
     // Initialize Boostrap-select
     $('.selectpicker').selectpicker();
@@ -34,22 +57,12 @@
       $(this).hide();
     });
   }
-  navlauncherpopovers = function() {
-    //PatternFly.popovers('[data-toggle=popover]');
-    $('[data-toggle=popover]').popover({
-      'delay': {"show": "1000", "hide": "0"},
-      'html': 'true',
-      'original-title': '',
-      'placement': 'bottom',
-      'toggle': 'popover',
-      'trigger': 'hover'
-    });
-  }
   $(document).ready(function() {
     navlauncher();
     navlauncheractive();
-    navlaunchersearch();
     navlauncherpopovers();
+    navlaunchersearch();
+    navlaunchertoggle();
   });
   $(window).resize(function() {
     navlauncher();

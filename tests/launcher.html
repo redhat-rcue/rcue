@@ -23,7 +23,7 @@
     <script src="../dist/js/navigation.min.js"></script>
   </head>
   <body>
-    <div class="offcanvas offcanvas-left">
+    <div class="offcanvas offcanvas-left active">
       <div class="application">
         <iframe src="launcher/cf-login.html" name="application" id="application"></iframe>
       </div><!-- /application -->
@@ -59,7 +59,7 @@
             </form>
           </div>
           <div class="nav-launcher-accordion panel-group" id="accordion">
-            <p><a href="#">View Product Name / Host Name</a>
+            <p><a href="#" class="nav-launcher-toggle" data-text-swap="View Default">View Product Name / Host Name</a>
               <div class="panel panel-default">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
@@ -78,7 +78,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost1</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 1</dd>
@@ -110,7 +110,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost2</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 2</dd>
@@ -142,7 +142,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat OpenStack</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>oshost1</dd>
                             <dt>Nickname</dt>
                             <dd>OpenStack 1</dd>
@@ -174,7 +174,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost1</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 1</dd>
@@ -221,7 +221,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost1</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 1</dd>
@@ -253,7 +253,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost2</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 2</dd>
@@ -285,7 +285,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost3</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 3</dd>
@@ -317,7 +317,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat OpenStack</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>oshost1</dd>
                             <dt>Nickname</dt>
                             <dd>OpenStack 1</dd>
@@ -349,7 +349,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost2</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 2</dd>
@@ -378,7 +378,203 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+
+
+
+            <div class="panel panel-default panel-show">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseAye" class="collapsed">
+                    <span class="group">Application</span> <span class="count">(16)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="collapseAye" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li>
+                      <a href="https://access.redhat.com/products/openshift-enterprise-red-hat/" target="application">
+                        OpenShift Enterprise by Red Hat <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/openshift-online-red-hat/" target="application">
+                        OpenShift Online by Red Hat <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-a-mq/" target="application">
+                        Red Hat JBoss A-MQ <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/" target="application">
+                        Red Hat JBoss BPM Suite <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-brms/" target="application">
+                        Red Hat JBoss BRMS <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-data-grid/" target="application">
+                        Red Hat JBoss Data Grid <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/" target="application">
+                        Red Hat JBoss Data Virtualization <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-fuse/" target="application">
+                        Red Hat JBoss Fuse <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/" target="application">
+                        Red Hat JBoss Fuse Service Works <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/" target="application">
+                        Red Hat JBoss Developer Studio <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/" target="application">
+                        Red Hat JBoss Enterprise Application Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-web-platform/" target="application">
+                        Red Hat JBoss Enterprise Web Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-operations-network/" target="application">
+                        Red Hat JBoss Operations Network <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-portal/" target="application">
+                        Red Hat JBoss Portal <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-soa-platform/" target="application">
+                        Red Hat JBoss SOA Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-web-server/" target="application">
+                        Red Hat JBoss Web Server <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default panel-show">
+              <div class="panel-heading clearfix">
+                <div class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseBee" class="collapsed">
+                    <span class="group">Infrastructure</span> <span class="count">(39)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="collapseBee" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li>
+                      <a href="https://access.redhat.com/products/openshift-enterprise-red-hat/" target="application">
+                        OpenShift Enterprise by Red Hat <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/openshift-online-red-hat/" target="application">
+                        OpenShift Online by Red Hat <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-a-mq/" target="application">
+                        Red Hat JBoss A-MQ <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/" target="application">
+                        Red Hat JBoss BPM Suite <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-brms/" target="application">
+                        Red Hat JBoss BRMS <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-data-grid/" target="application">
+                        Red Hat JBoss Data Grid <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/" target="application">
+                        Red Hat JBoss Data Virtualization <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-fuse/" target="application">
+                        Red Hat JBoss Fuse <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/" target="application">
+                        Red Hat JBoss Fuse Service Works <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/" target="application">
+                        Red Hat JBoss Developer Studio <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/" target="application">
+                        Red Hat JBoss Enterprise Application Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-web-platform/" target="application">
+                        Red Hat JBoss Enterprise Web Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-operations-network/" target="application">
+                        Red Hat JBoss Operations Network <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-portal/" target="application">
+                        Red Hat JBoss Portal <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-soa-platform/" target="application">
+                        Red Hat JBoss SOA Platform <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://access.redhat.com/products/red-hat-jboss-web-server/" target="application">
+                        Red Hat JBoss Web Server <span class="label label-default">More info</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="panel panel-default panel-hidden">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
@@ -404,7 +600,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost1</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 1</dd>
@@ -436,7 +632,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost2</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 2</dd>
@@ -468,7 +664,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost3</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 3</dd>
@@ -500,7 +696,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost4</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 4</dd>
@@ -529,7 +725,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-hidden">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
@@ -555,7 +751,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat OpenStack</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>oshost1</dd>
                             <dt>Nickname</dt>
                             <dd>OpenStack 1</dd>
@@ -587,7 +783,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat OpenStack</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>oshost2</dd>
                             <dt>Nickname</dt>
                             <dd>OpenStack 2</dd>
@@ -616,7 +812,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-hidden">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed">
@@ -642,7 +838,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost1</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 1</dd>
@@ -674,7 +870,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost2</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 2</dd>
@@ -706,7 +902,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost3</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 3</dd>
@@ -724,7 +920,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-hidden">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" class="collapsed">
@@ -750,7 +946,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost1</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 1</dd>
@@ -782,7 +978,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost2</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 2</dd>
@@ -814,7 +1010,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost3</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 3</dd>
@@ -846,7 +1042,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Satellite</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>sathost4</dd>
                             <dt>Nickname</dt>
                             <dd>Satellite 4</dd>
@@ -875,7 +1071,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-hidden">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" class="collapsed">
@@ -895,11 +1091,14 @@
                 <div class="panel-body">
                   <ul class="nav nav-pills nav-stacked">
                     <li>
-                      <a href="https://access.redhat.com/products/red-hat-storage/" target="application">Red Hat Storage <span class="label label-primary">More info</span></a></li>
+                      <a href="https://access.redhat.com/products/red-hat-storage/" target="application">Red Hat Storage <span class="label label-default">More info</span></a></li>
                   </ul>
                 </div>
               </div>
             </div>
+
+
+
             <div class="panel panel-default">
               <div class="panel-heading clearfix">
                 <div class="panel-title">
@@ -918,7 +1117,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat CloudForms</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>cfhost3</dd>
                             <dt>Nickname</dt>
                             <dd>CloudForms 3</dd>
@@ -950,7 +1149,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat OpenStack</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>oshost2</dd>
                             <dt>Nickname</dt>
                             <dd>OpenStack 2</dd>
@@ -982,7 +1181,7 @@
                           <dl>
                             <dt>Product Name</dt>
                             <dd>Red Hat Enterprise Virtualization</dd>
-                            <dt>Host name</dt>
+                            <dt>Host Name</dt>
                             <dd>rhevhost2</dd>
                             <dt>Nickname</dt>
                             <dd>Enterprise Virtualization 2</dd>

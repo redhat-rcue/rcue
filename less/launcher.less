@@ -4,7 +4,7 @@
 
 .application {
   bottom: 0;
-  left: @offcanvas-navbar-toggle-width;
+  left: 0;
   -webkit-overflow-scrolling: touch; /* for iOS */
   overflow-y: scroll; /* for iOS */
   position: absolute;
@@ -14,6 +14,7 @@
   iframe {
     border: 0;
     min-height: 100%;
+    padding: 0 0 0 @offcanvas-navbar-toggle-width;
     position: absolute;
     left: 0;
     top: 0;
@@ -94,7 +95,7 @@
           background: @dropdown-link-hover-bg;
           border-color: @dropdown-link-hover-border-color;
           .label {
-            background: darken(@label-primary-bg, 7.5%);
+            background: darken(@label-default-bg, 7.5%);
           }
         }
         &:hover > .dropdown .dropdown-toggle {
@@ -227,6 +228,10 @@
       }
     }
   }
+}
+
+.panel-hidden {
+  display: none;
 }
 
 .nav-launcher {

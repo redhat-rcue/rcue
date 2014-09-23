@@ -10110,7 +10110,7 @@ h2,
 /* RCUE-specific */
 .application {
   bottom: 0;
-  left: 20px;
+  left: 0;
   -webkit-overflow-scrolling: touch;
   /* for iOS */
   overflow-y: scroll;
@@ -10123,6 +10123,7 @@ h2,
 .application iframe {
   border: 0;
   min-height: 100%;
+  padding: 0 0 0 20px;
   position: absolute;
   left: 0;
   top: 0;
@@ -10203,7 +10204,7 @@ h2,
   border-color: #b3d3e7;
 }
 .navigation .panel-body .nav-pills > li:hover > a .label {
-  background: #1494cb;
+  background: #868686;
 }
 .navigation .panel-body .nav-pills > li:hover:hover > .dropdown .dropdown-toggle {
   visibility: visible;
@@ -10328,6 +10329,9 @@ h2,
 }
 .navigation .popover dl dt {
   font-weight: 600;
+}
+.panel-hidden {
+  display: none;
 }
 .nav-launcher a {
   color: inherit;
