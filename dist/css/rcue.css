@@ -10140,10 +10140,10 @@ h2,
   min-height: 100%;
 }
 .navigation .navbar-toggle {
-  background: #dfdfdf;
+  background: #0087ba;
   border: 0;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
-  color: #222;
+  color: #fff;
   display: block;
   min-height: 100%;
   margin: 0;
@@ -10155,8 +10155,7 @@ h2,
   z-index: 100;
 }
 .navigation .navbar-toggle:hover {
-  background: #d1d1d1;
-  color: #000;
+  background: #007dad;
 }
 .active .navigation .navbar-toggle {
   background: transparent;
@@ -10165,14 +10164,11 @@ h2,
   background: #d2d2d2;
   background: rgba(210, 210, 210, 0.4);
 }
-.active .navigation .navbar-toggle:hover .fa-arrow-right {
-  background: transparent;
-  box-shadow: none;
-}
 .active .navigation .navbar-toggle .fa-arrow-right {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  color: #0087ba;
   padding: 3px;
 }
 .active .navigation .navbar-toggle .fa-arrow-right:before {
@@ -10180,6 +10176,9 @@ h2,
 }
 .navigation .panel-body {
   padding: 6px 0;
+}
+.navigation .panel-body .nav-pills > li {
+  position: relative;
 }
 .navigation .panel-body .nav-pills > li.active > a {
   background: #0099d3 !important;
@@ -10196,6 +10195,19 @@ h2,
     top: 1px;
   }
 }
+.navigation .panel-body .nav-pills > li.active > a .label {
+  background: #0d6185 !important;
+}
+.navigation .panel-body .nav-pills > li:hover > a {
+  background: #d4edfa;
+  border-color: #b3d3e7;
+}
+.navigation .panel-body .nav-pills > li:hover > a .label {
+  background: #1494cb;
+}
+.navigation .panel-body .nav-pills > li:hover:hover > .dropdown .dropdown-toggle {
+  visibility: visible;
+}
 .navigation .panel-body .nav-pills > li > a {
   border-radius: none;
   border-bottom: 1px solid transparent;
@@ -10203,13 +10215,15 @@ h2,
   border-top: 1px solid transparent;
   color: #333333;
   overflow: hidden;
-  padding: 1px 20px 1px 32px;
+  padding: 1px 40px 1px 32px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.navigation .panel-body .nav-pills > li > a:hover {
-  background: #d4edfa;
-  border-color: #b3d3e7;
+.navigation .panel-body .nav-pills > li > a .label {
+  font-size: 75%;
+  font-weight: 500;
+  margin: 0 0 0 3px;
+  padding: 0 3px;
 }
 .navigation .panel-body .nav-stacked > li + li {
   margin-top: 0;
@@ -10221,6 +10235,37 @@ h2,
   border-left: 0;
   border-right: 0;
   overflow: visible;
+}
+.navigation .panel-group .panel .active .dropdown .dropdown-toggle {
+  color: #b3e1f2;
+  color: rgba(255, 255, 255, 0.7);
+}
+.navigation .panel-group .panel .active .dropdown .dropdown-toggle:hover {
+  color: #fff;
+}
+.navigation .panel-group .panel .active .dropdown.open .dropdown-toggle {
+  color: #fff;
+}
+.navigation .panel-group .panel .dropdown {
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.navigation .panel-group .panel .dropdown .dropdown-menu {
+  margin-top: -2px;
+}
+.navigation .panel-group .panel .dropdown .dropdown-toggle {
+  color: inherit;
+  height: 24px;
+  line-height: 1;
+  visibility: hidden;
+}
+.navigation .panel-group .panel .dropdown .dropdown-toggle:hover {
+  color: #0099d3;
+}
+.navigation .panel-group .panel .dropdown.open .dropdown-toggle {
+  color: #0099d3;
+  visibility: visible;
 }
 .navigation .panel-group .panel-heading {
   background-image: -webkit-linear-gradient(top, #fafafa 0%, #e0e0e0 100%);
@@ -10265,24 +10310,11 @@ h2,
   font-weight: 300;
 }
 .navigation .panel-group .panel-title .dropdown {
-  position: absolute;
   right: 0;
   top: -7px;
 }
-.navigation .panel-group .panel-title .dropdown .dropdown-menu {
-  margin-top: -2px;
-}
 .navigation .panel-group .panel-title .dropdown .dropdown-toggle {
-  color: inherit;
   height: 29px;
-  visibility: hidden;
-}
-.navigation .panel-group .panel-title .dropdown .dropdown-toggle:hover {
-  color: #0099d3;
-}
-.navigation .panel-group .panel-title .dropdown.open .dropdown-toggle {
-  color: #0099d3;
-  visibility: visible;
 }
 .navigation .popover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
@@ -10296,6 +10328,9 @@ h2,
 }
 .navigation .popover dl dt {
   font-weight: 600;
+}
+.nav-launcher a {
+  color: inherit;
 }
 .nav-launcher p {
   margin: 0 20px 5px;

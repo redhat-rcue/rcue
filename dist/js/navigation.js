@@ -11,9 +11,9 @@
     }
   }
   navlauncheractive = function() {
-    $(".nav-launcher-accordion .panel-body .nav li").on('click', function () {
+    $(".nav-launcher-accordion .panel-body .nav li a").on('click', function () {
       $(".nav-launcher-accordion .panel-body .nav li").removeClass('active');
-      var siblingURL = $(this).children('a').attr('href');
+      var siblingURL = $(this).attr('href');
       var selector = ".nav-launcher-accordion .panel-body .nav li a[href=\"" + siblingURL + "\"]";
       $(selector).parent('li').toggleClass('active');
     });
