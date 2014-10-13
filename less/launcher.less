@@ -1,5 +1,5 @@
 //
-// Switcher
+// App Launcher
 // --------------------------------------------------
 
 .application {
@@ -27,7 +27,21 @@
     height: 100%;
     overflow-x: hidden; /* Prevent scroll on narrow devices */
   }
+  .instructions {
+    font-size: @font-size-large;
+    margin: 0 @grid-gutter-width;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .modal-body legend {
+    border-bottom: 0;
+    font-size: @font-size-base;
+    margin-bottom: 10px;
+  }
 }
+
 
 .navigation {
   background: darken(@btn-default-bg-img-stop, 3.5%);
@@ -53,19 +67,26 @@
     .active & {
       background: transparent;
       &:hover {
-        background: #d2d2d2;
-        background: rgba(210, 210, 210, .4);
+        background: darken(@link-color, 7.5%);
+        .fa {
+          background: transparent;
+          box-shadow: none;
+          color: #fff;
+        }
       }
-      .fa-arrow-right {
+      .fa {
         background: rgba(255,255,255,.8);
         box-shadow: 0 0 2px rgba(0,0,0,.1);
         border-radius: 10px;
         color: darken(@link-color, 5%);
-        padding: 3px;
         &:before {
           content: "\f060";
         }
       }
+    }
+    .fa {
+      color: #fff;
+      padding: 3px;
     }
   }
   .panel-body {
@@ -98,7 +119,7 @@
             background: darken(@label-default-bg, 7.5%);
           }
         }
-        &:hover > .dropdown .dropdown-toggle {
+        &:hover > .edit .btn-link {
           visibility: visible;
         }
       }
@@ -132,26 +153,23 @@
       border-left: 0;
       border-right: 0;
       overflow: visible;
-      .active .dropdown {
-        .dropdown-toggle {
+      .active .edit {
+        .btn-link {
           color: #b3e1f2;
           color: rgba(255,255,255,.7);
           &:hover {
             color: #fff;
           }
         }
-        &.open .dropdown-toggle {
+        &.open .btn-link {
           color: #fff;
         }
       }
-      .dropdown {
+      .edit {
         position: absolute;
         right: 20px;
         top: 0;
-        .dropdown-menu {
-          margin-top: -2px;
-        }
-        .dropdown-toggle {
+        .btn-link {
           color: inherit;
           height: 24px;
           line-height: 1;
@@ -159,10 +177,16 @@
           &:hover {
             color: @link-color;
           }
+          .fa-ellipsis-v {
+            font-size: @font-size-large;
+          }
         }
-        &.open .dropdown-toggle {
+        &.open .btn-link {
           color: @link-color;
           visibility: visible;
+        }
+        .dropdown-menu {
+          margin-top: -2px;
         }
       }
     }
@@ -172,7 +196,7 @@
     }
     .panel-title {
       position: relative;
-      &:hover > .dropdown .dropdown-toggle {
+      &:hover > .edit .dropdown-toggle {
         visibility: visible;
       }
       > a {
@@ -206,7 +230,7 @@
           }
         }
       }
-      .dropdown {
+      .edit {
         right: 0;
         top: -7px;
         .dropdown-toggle {
@@ -222,6 +246,9 @@
       margin-bottom: 0;
       dd {
         margin-left: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 99%;
       }
       dt {
         font-weight: 600;
@@ -230,85 +257,52 @@
   }
 }
 
-.panel-hidden {
-  display: none;
-}
-
-.nav-launcher {
-  a {
-    color: inherit;
-  }
-  p {
-    margin: 0 20px 5px;
-  }
-}
-
 .nav-launcher-brand {
   #gradient > .vertical(@btn-default-bg-img-start, darken(@btn-default-bg-img-stop, 5%));
-  border-bottom: 1px solid #ccc;
   padding: 7px 20px 8px;
-  @media (min-width: @screen-sm) {
+  @media (min-width: (@screen-sm + @offcanvas-sidebar-width)) {
     padding-bottom: 18px;
     padding-top: 17px;
   }
   position: relative;
-  &:after {
-    background: #ededed;
-    bottom: -2px;
-    content: '';
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-  img {
+  .nav-launcher-logo {
+    background: url(../img/redhat-app-launcher.svg) no-repeat;
+    background-size: auto 100%;
+    height: 22px;
+    text-indent: -9999px;
     width: 174px;
-    @media (min-width: @screen-sm) {
+    @media (min-width: (@screen-sm + @offcanvas-sidebar-width)) {
+      height: 36px;
       width: 280px;
+      .ie8 & {
+        background-image: url(../img/redhat-app-launcher.png);
+      }
+    }
+    .ie8 & {
+      background-image: url(../img/redhat-app-launcher-sm.png);
     }
   }
 }
 
 .nav-launcher-config {
-  margin-top: 40px;
-}
-
-.nav-launcher-filters {
-  padding: 15px 20px;
-  .bootstrap-select {
-    float: left !important;
-    margin-bottom: 0 !important;
-    margin-right: 5px;
-    width: auto !important;
-    &.btn-group .dropdown-menu {
-      width: 250px;
-    }
+  margin: 0 20px;
+  .btn-link {
+    padding: 0;
   }
-  .form-group {
-    margin-bottom: 0;
-  }
-  .selectpicker {
-    box-shadow: none;
-    max-width: 90px;
-    width: auto;
+  .location {
+    margin-top: 40px;
   }
 }
-
-
-/* Offcanvas */
 
 .offcanvas {
   min-height: 100%;
   position: relative;
-  -webkit-transition: all .25s ease-out;
-       -o-transition: all .25s ease-out;
-          transition: all .25s ease-out;
 }
 
 .offcanvas-left {
-  left: 0;
+  margin-left: 0;
   &.active {
-    left: @offcanvas-sidebar-width - @offcanvas-navbar-toggle-width;
+    margin-left: @offcanvas-sidebar-width - @offcanvas-navbar-toggle-width;
   }
   .offcanvas-sidebar {
     left: -(@offcanvas-sidebar-width - @offcanvas-navbar-toggle-width);
@@ -316,9 +310,9 @@
 }
 
 .offcanvas-right {
-  right: 0;
+  margin-right: 0;
   &.active {
-    right: @offcanvas-sidebar-width;
+    margin-right: @offcanvas-sidebar-width;
   }
   .offcanvas-sidebar {
     right: -@offcanvas-sidebar-width;

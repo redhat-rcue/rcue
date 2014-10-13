@@ -65,8 +65,7 @@ module.exports = function (grunt) {
           },
           production: {
             files: {
-              'dist/js/offcanvas.min.js': ['dist/js/offcanvas.js'],
-              'dist/js/navigation.min.js': ['dist/js/navigation.js']
+              'dist/js/launcher.min.js': ['dist/js/launcher.js']
             }
           }
         },
@@ -76,7 +75,7 @@ module.exports = function (grunt) {
                 tasks: ['less']
             },
             js: {
-                files: ['dist/js/offcanvas.js', 'dist/js/navigation.js'],
+                files: ['dist/js/*.js', '!dist/js/*.min.js'],
                 tasks: ['uglify']
             },
             livereload: {
