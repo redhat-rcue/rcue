@@ -1,32 +1,16 @@
 (function($) {
-  navlauncher = function() {
-    var documentHeight = $(window).height();
-    var navigationHeight = $('.navigation').outerHeight();
-    if (navigationHeight > documentHeight) {
-      $('.offcanvas').children('div').css({ "min-height":navigationHeight});
-    } else {
-      $('.offcanvas').children('div').css({ "min-height": "100%"});
-    }
-  }
-  navlauncheractive = function() {
-    $(".nav-launcher-accordion .panel-body .nav > li > a").on('click', function () {
-      $(".nav-launcher-accordion .panel-body .nav > li").removeClass('active');
-      var siblingURL = $(this).attr('href');
-      var selector = ".nav-launcher-accordion .panel-body .nav > li > a[href=\"" + siblingURL + "\"]";
-      $(selector).parent('li').toggleClass('active');
-    });
-  }
-  navlauncherbutton = function() {
-    $('[data-toggle="offcanvas"]').click(function () {
-      $('.offcanvas').toggleClass('active');
-    });
-  }
-  navlauncherconfig = function() {
-    $('#location').on('click', function () {
-      if ($(this).is(":checked")) {
-        $(".nav-launcher-accordion .panel-body .nav > li > a").attr('target','application');
-      } else {
-        $(".nav-launcher-accordion .panel-body .nav > li > a").attr('target','_blank');
+  navlauncher = function () {
+    // Keep the context menu open if an accordion header is clicked
+    $('.dropdown.context').on({
+      "click": function(event) {
+        if($(event.target).attr('data-toggle') == 'collapse') {
+          this.closable = false;
+        } else {
+          this.closable = true;
+        }
+      },
+      "hide.bs.dropdown":  function() { 
+        return this.closable;
       }
     });
   }
@@ -42,12 +26,6 @@
   }
   $(document).ready(function() {
     navlauncher();
-    navlauncheractive();
-    navlauncherbutton();
-    navlauncherconfig();
     navlauncherpopovers();
-  });
-  $(window).resize(function() {
-    navlauncher();
   });
 })(jQuery);
