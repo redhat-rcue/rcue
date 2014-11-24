@@ -10196,10 +10196,10 @@ h2,
 }
 .context .infotip .panel-group .panel-title > a[data-toggle]:before {
   display: inline-block;
+  margin-left: 0;
   margin-right: 0;
-}
-.context .infotip .panel-group .panel-title > a[data-toggle].collapsed:before {
-  margin-left: 3px;
+  text-align: center;
+  width: 12px;
 }
 .context .infotip .popover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
