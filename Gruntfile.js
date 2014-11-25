@@ -43,6 +43,7 @@ module.exports = function (grunt) {
         less: {
             development: {
                 files: {
+                    "dist/css/launcher.css": "less/launcher.less",
                     "dist/css/rcue.css": "less/rcue.less"
                 },
                 options: {
@@ -51,6 +52,7 @@ module.exports = function (grunt) {
             },
             production: {
                 files: {
+                    "dist/css/launcher.min.css": "less/launcher.less",
                     "dist/css/rcue.min.css": "less/rcue.less"
                 },
                 options: {
