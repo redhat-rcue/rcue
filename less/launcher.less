@@ -2,23 +2,107 @@
 // App Launcher
 // --------------------------------------------------
 
+@import "../components/patternfly/components/font-awesome/less/font-awesome.less";
 @import "../components/patternfly/components/bootstrap/less/variables.less";
 @import "../components/patternfly/components/bootstrap/less/mixins.less";
+@import "../components/patternfly/components/bootstrap/less/utilities.less";
+@import "../components/patternfly/components/bootstrap/less/responsive-utilities.less";
+@import "../components/patternfly/components/bootstrap/less/component-animations.less";
 @import "../components/patternfly/less/variables.less";
+@import "../components/patternfly/less/mixins.less";
+@import "../components/patternfly/less/fonts.less";
 @import "variables.less";
-@import "../components/patternfly/less/infotip.less";
+
+.navbar-nav {
+  @import "../components/patternfly/components/bootstrap/less/dropdowns.less";
+  @import "../components/patternfly/less/dropdowns.less";
+}
 
 .context {
+  @import "../components/patternfly/components/bootstrap/less/panels.less";
+  @import "../components/patternfly/components/bootstrap/less/popovers.less";
+  @import "../components/patternfly/less/panels.less";
+  @import "../components/patternfly/less/popovers.less";
+  @import "../components/patternfly/less/infotip.less";
+  font-family: @font-family-base;
+  line-height: 1;
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+  > a {
+    color: @navbar-pf-color;
+    display: block;
+    line-height: 1;
+    position: relative;
+    text-shadow: none;
+    @media (max-width: @screen-xs-max) {
+      padding: 10px 20px;
+    }
+    &:hover, &:focus {
+      color: @navbar-pf-active-color;
+    }
+  }
+  &.open {
+    > a {
+      &, &:hover, &:focus {
+        background-color: @navbar-pf-navbar-nav-active-bg-color;
+        color: @navbar-pf-active-color;
+      }
+    }
+  }
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    > a {
+      background-color: @navbar-pf-navbar-primary-context-bg-color-stop;
+      border-bottom: 1px solid @navbar-pf-navbar-primary-context-border-color;
+      border-right: 1px solid @navbar-pf-navbar-primary-context-border-color;
+      border-top: 1px solid @navbar-pf-navbar-primary-context-border-top-color;
+      font-size: @font-size-large;
+      font-weight: 600;
+      margin-top: -1px;
+      padding: 14px 20px;
+      .header + .navbar & { // for CloudForms
+        margin-top: 0;
+        padding-bottom: 13px; 
+        padding-top: 13px;
+      }
+      #gradient > .vertical(@navbar-pf-navbar-primary-context-bg-color-start, @navbar-pf-navbar-primary-context-bg-color-stop);
+      &:hover {
+        background-color: @navbar-pf-navbar-primary-context-hover-bg-color-stop;
+        border-bottom-color: @navbar-pf-navbar-primary-context-hover-border-color;
+        border-right-color: @navbar-pf-navbar-primary-context-hover-border-color;
+        border-top-color: @navbar-pf-navbar-primary-context-hover-border-top-color;
+        #gradient > .vertical(@navbar-pf-navbar-primary-context-hover-bg-color-start, @navbar-pf-navbar-primary-context-hover-bg-color-stop);
+      }
+    }
+    &.open > a {
+      background-color: @navbar-pf-navbar-primary-context-active-bg-color-stop;
+      border-bottom-color: @navbar-pf-navbar-primary-context-active-border-color;
+      border-right-color: @navbar-pf-navbar-primary-context-active-border-right-color;
+      border-top-color: @navbar-pf-navbar-primary-context-active-border-top-color;
+      #gradient > .vertical(@navbar-pf-navbar-primary-context-active-bg-color-start, @navbar-pf-navbar-primary-context-active-bg-color-stop);
+    }
+  }
   .infotip {
-    .box-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+    .box-shadow(none);
+    margin-top: 0;
+    @media (min-width: @grid-float-breakpoint) {
+      .box-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+      margin-top: 10px;
+    }
     min-width: 0;
     @media (max-width: @screen-xs-max) {
       background-color: transparent !important;
+      border: 0;
+      float: none;
+      position: static;
+      width: auto;
     }
-    .arrow {
-      left: 27px;
+    > .arrow {
+      left: 27px !important;
       &:after {
-        border-bottom-color: @btn-default-bg-img-start;
+        border-bottom-color: @btn-default-bg-img-start !important;
       }
       @media (max-width: @screen-xs-max) {
         display: none;
@@ -26,6 +110,11 @@
     }
     .panel-body {
       padding: 6px 0;
+      .nav {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
       .nav-pills > li {
         position: relative;
         &.active > a {
@@ -45,6 +134,8 @@
           border-radius: 0;
           border-top: 1px solid transparent;
           color: @text-color;
+          display: block;
+          line-height: @line-height-base;
           padding: 1px 10px 1px 22px;
           @media (max-width: @screen-xs-max) {
             padding-left: 36px;
@@ -53,8 +144,11 @@
           white-space: nowrap;
         }
       }
-      .nav-stacked > li + li {
-        margin-top: 0;
+      .nav-stacked > li {
+        float: none;
+        + li {
+          margin-top: 0;
+        }
       }
     }
     .panel-group {
@@ -98,6 +192,7 @@
       font-size: @font-size-small;
       dl {
         margin-bottom: 0;
+        margin-top: 0;
         dd {
           margin-left: 5px;
         }
@@ -109,6 +204,7 @@
   }
   @media (max-width: @screen-xs-max) {
     .with-icon {
+      font-size: @font-size-base;
       .fa {
         font-size: @font-size-large;
         margin-right: 1px;
