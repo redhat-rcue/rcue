@@ -1,5 +1,7 @@
 /*global module,require*/
-var lrSnippet = require('connect-livereload')();
+var lrSnippet = require('connect-livereload')({
+    port: 35730
+});
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
@@ -10,8 +12,8 @@ module.exports = function (grunt) {
 
     // configurable paths
     var projectConfig = {
-        src: '',
-        dist: 'dist'
+        dist: 'dist',
+        src: ''
     };
 
     try {
@@ -19,29 +21,13 @@ module.exports = function (grunt) {
     } catch (e) {}
 
     grunt.initConfig({
-        config: projectConfig,
         clean: {
             build: '<%= config.dist %>'
         },
-        watch: {
-            options: {
-                livereload: true
-            },
-            css: {
-                files: 'less/*.less',
-                tasks: ['less'],
-            },
-            livereload: {
-                files: [
-                    'tests/*.html',
-                    'dist/css/*.css'
-                ]
-            }
-        },
+        config: projectConfig,
         connect: {
             server: {
                 options: {
-                    port: 9000,
                     hostname: '0.0.0.0',
                     middleware: function (connect) {
                         return [
@@ -49,38 +35,54 @@ module.exports = function (grunt) {
                             mountFolder(connect, projectConfig.src),
                             mountFolder(connect, projectConfig.src + 'tests')
                         ];
-                    }
+                    },
+                    port: 9001
                 }
             }
         },
         less: {
             development: {
-                options: {
-                    paths: ["less/"]
-                },
                 files: {
                     "dist/css/rcue.css": "less/rcue.less"
+                },
+                options: {
+                    paths: ["less/"]
                 }
             },
             production: {
-                options: {
-                    paths: ["less/"],
-                    cleancss: true
-                },
                 files: {
                     "dist/css/rcue.min.css": "less/rcue.less"
+                },
+                options: {
+                    cleancss: true,
+                    paths: ["less/"]
                 }
+            }
+        },
+    	watch: {
+            css: {
+                files: 'less/*.less',
+                tasks: ['less'],
+            },
+            livereload: {
+                files: [
+                    'dist/css/*.css',
+                    'tests/*.html'
+                ]
+            },
+            options: {
+                livereload: 35730
             }
         }
     });
 
+    grunt.registerTask('build', [
+        'less'
+    ]);
+
     grunt.registerTask('server', [
         'connect:server',
         'watch'
-    ]);
-
-    grunt.registerTask('build', [
-        'less'
     ]);
 
     grunt.registerTask('default', ['build']);
