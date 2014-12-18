@@ -4,9 +4,13 @@ The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) pr
 
 This reference implementation of RCUE is based on [PatternFly](https://www.patternfly.org/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
 
+## Dependencies
+
+RCUE incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of RCUE.
+
 ## Development
 
-Development setup requires nodejs. If you do not already have nodejs and npm installed on your system, please see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager for how to install on your distribution.
+Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
 
 ### Install Bower
 
@@ -14,7 +18,7 @@ After ensuring nodejs and npm are available, install [Bower](http://bower.io/) g
 
     npm install -g bower
 
-Bower is used to install and update PatternFly's dependencies.
+Bower is used to install and update RCUE's dependencies.
 
 ### Install Development Dependencies
 
@@ -27,6 +31,10 @@ This will install all necessary development packages into `node_modules/`. At th
 Additionally you may need to install the grunt command line utility.  To do this run:
 
     npm install -g grunt-cli
+
+Test pages are generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
+
+    gem install jekyll
 
 ### Live Reload Server
 
@@ -63,6 +71,8 @@ This task will compile and minify the lesscss files into a single CSS file locat
 ## Tests
 
 The `tests/` directory contains HTML pages with component and pattern examples in order to facilitate development.  Please consult the official documentation (see below) for full details on how to use RCUE.
+
+The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these files directly.  Changes to the test source files (`components/patternfly/tests-src/`) should be made upstream in PatternFly.
 
 ## Documentation
 
