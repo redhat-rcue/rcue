@@ -28,7 +28,9 @@
   line-height: 1;
   list-style: none;
   a {
+    font-family: @font-family-base !important; // Satellite override
     text-decoration: none;
+    text-shadow: none !important; // Satellite override
   }
   > a {
     color: @navbar-pf-color;
@@ -41,6 +43,14 @@
     }
     &:hover, &:focus {
       color: @navbar-pf-active-color;
+    }
+  }
+  .dropdown-menu{
+    &:after {
+      display: none !important; // for Satellite
+    }
+    a {
+      font-size: @font-size-base !important; // for Satellite
     }
   }
   &.open {
@@ -62,12 +72,20 @@
       font-weight: 600;
       margin-top: -1px;
       padding: 14px 20px;
+      #gradient > .vertical(@navbar-pf-navbar-primary-context-bg-color-start, @navbar-pf-navbar-primary-context-bg-color-stop);
       .header + .navbar & { // for CloudForms
         margin-top: 0;
         padding-bottom: 13px; 
         padding-top: 13px;
       }
-      #gradient > .vertical(@navbar-pf-navbar-primary-context-bg-color-start, @navbar-pf-navbar-primary-context-bg-color-stop);
+      .persist-header & { // for Satellite
+        border-bottom: 0;
+        border-left: 1px solid @navbar-pf-navbar-primary-context-border-color;
+        padding-bottom: 9px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+      }
       &:hover {
         background-color: @navbar-pf-navbar-primary-context-hover-bg-color-stop;
         border-bottom-color: @navbar-pf-navbar-primary-context-hover-border-color;

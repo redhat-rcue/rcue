@@ -2644,7 +2644,9 @@
   right: 1px;
 }
 .context a {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
   text-decoration: none;
+  text-shadow: none !important;
 }
 .context > a {
   color: #dbdada;
@@ -2661,6 +2663,12 @@
 .context > a:hover,
 .context > a:focus {
   color: #ffffff;
+}
+.context .dropdown-menu:after {
+  display: none !important;
+}
+.context .dropdown-menu a {
+  font-size: 12px !important;
 }
 .context.open > a,
 .context.open > a:hover,
@@ -2690,6 +2698,14 @@
     margin-top: 0;
     padding-bottom: 13px;
     padding-top: 13px;
+  }
+  .persist-header .context > a {
+    border-bottom: 0;
+    border-left: 1px solid #65696d;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
   }
   .context > a:hover {
     background-color: #5a5e62;
