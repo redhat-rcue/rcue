@@ -22,20 +22,20 @@
     "bootstrap": "~3.1.1",
     "bootstrap-combobox": "~1.1.6",
     "bootstrap-select": "~1.5.4",
-    "bootstrap-treeview": "~1.0.0",
-    "datatables": "~1.10.0",
+    "bootstrap-treeview": "~1.0.1",
+    "datatables": "~1.10.4",
     "datatables-colreorder": "~1.1.2",
     "datatables-colvis": "~1.1.1",
-    "font-awesome": "~4.1.0",
+    "font-awesome": "~4.2.0",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   },
-  "_release": "f016a76f4d",
+  "_release": "2b70f95ec9",
   "_resolution": {
     "type": "commit",
-    "commit": "f016a76f4d"
+    "commit": "2b70f95ec99a190dbd58086ad657ab549fa344fb"
   },
   "_source": "git://github.com/patternfly/patternfly.git",
-  "_target": "f016a76f4d",
+  "_target": "2b70f95ec99a190dbd58086ad657ab549fa344fb",
   "_originalSource": "git://github.com/patternfly/patternfly"
 }

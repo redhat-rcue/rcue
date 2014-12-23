@@ -16,7 +16,7 @@
     "tests"
   ],
   "devDependencies": {
-    "patternfly": "git://github.com/patternfly/patternfly#f016a76f4d"
+    "patternfly": "git://github.com/patternfly/patternfly#2b70f95ec99a190dbd58086ad657ab549fa344fb"
   },
   "private": true
 }
