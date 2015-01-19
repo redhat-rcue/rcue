@@ -8799,7 +8799,7 @@ h6 .label {
   }
 }
 .login-pf body {
-  background: #1d2226 url("../img/bg-login.jpg") repeat-x 50% 0;
+  background: #1a1a1a url("../img/bg-login.png") repeat-x 50% 0;
   background-size: auto;
   color: #fff;
 }
@@ -8809,8 +8809,7 @@ h6 .label {
   }
 }
 .login-pf .container {
-  background-color: #252a2e;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   clear: right;
   padding-bottom: 40px;
   padding-top: 20px;
@@ -10353,3 +10352,57 @@ h2,
 /* RCUE overrides */
 /* Bootstrap overrides */
 /* RCUE-specific */
+.login-pf {
+  background-color: #1a1a1a;
+}
+@media (min-width: 768px) {
+  .login-pf {
+    background-image: url("../img/bg-login-2.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .login-pf {
+    background-size: auto;
+  }
+}
+.login-pf #badge {
+  margin-bottom: 50px;
+}
+.login-pf body {
+  background: transparent;
+}
+@media (min-width: 768px) {
+  .login-pf body {
+    background-image: url("../img/bg-login.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .login-pf body {
+    background-size: auto;
+  }
+}
+.login-pf #brand {
+  top: -30px;
+}
+@media (min-width: 768px) {
+  .login-pf #brand {
+    top: -40px;
+  }
+}
+.login-pf .container {
+  padding-top: 0;
+}
+@media (min-width: 992px) {
+  .login-pf .container {
+    bottom: 20%;
+  }
+  .login-pf .container .details p:first-child {
+    margin-right: 120px;
+  }
+}
