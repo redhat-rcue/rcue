@@ -32,15 +32,16 @@
     top: -30px;
     @media (min-width: @screen-sm-min) {
       top: -40px;
+      + .alert {
+        margin-top: -20px;
+      }
     }
   }
   .container {
     padding-top: 0;
     @media (min-width: @screen-md-min) {
       bottom: 20%;
-      .details p:first-child {
-        margin-right: 120px;
-      }
+      padding-right: 120px;
     }
   }
 }

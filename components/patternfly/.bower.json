@@ -30,12 +30,12 @@
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   },
-  "_release": "fca1145",
+  "_release": "5d4c320166",
   "_resolution": {
     "type": "commit",
-    "commit": "fca1145"
+    "commit": "5d4c3201667fbbd83da11774f127bca0c1cd4f54"
   },
   "_source": "git://github.com/patternfly/patternfly.git",
-  "_target": "fca1145",
+  "_target": "5d4c3201667fbbd83da11774f127bca0c1cd4f54",
   "_originalSource": "git://github.com/patternfly/patternfly"
 }

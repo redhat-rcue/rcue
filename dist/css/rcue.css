@@ -8827,6 +8827,10 @@ h6 .label {
     width: 100%;
   }
 }
+.login-pf .container [class^='alert'] {
+  background: transparent;
+  color: #fff;
+}
 .login-pf .container .details p:first-child {
   border-top: 1px solid #474747;
   padding-top: 25px;
@@ -10425,6 +10429,9 @@ h2,
   .login-pf #brand {
     top: -40px;
   }
+  .login-pf #brand + .alert {
+    margin-top: -20px;
+  }
 }
 .login-pf .container {
   padding-top: 0;
@@ -10432,8 +10439,6 @@ h2,
 @media (min-width: 992px) {
   .login-pf .container {
     bottom: 20%;
-  }
-  .login-pf .container .details p:first-child {
-    margin-right: 120px;
+    padding-right: 120px;
   }
 }
