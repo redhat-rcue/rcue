@@ -54,7 +54,9 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          "dist/css/rcue.css": "less/rcue.less"
+          "dist/css/rcue.css": "less/rcue.less",
+          "components/patternfly/tests-src/_includes/login-standalone.css": "less/login-standalone.less",
+          "components/patternfly/tests-src/_includes/login-standalone-origin.css": "less/login-standalone-origin.less"
         },
         options: {
           paths: ["less/"]
@@ -62,7 +64,9 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          "dist/css/rcue.min.css": "less/rcue.less"
+          "dist/css/rcue.min.css": "less/rcue.less",
+          "components/patternfly/tests-src/_includes/login-standalone.min.css": "less/login-standalone.less",
+          "components/patternfly/tests-src/_includes/login-standalone-origin.min.css": "less/login-standalone-origin.less"
         },
         options: {
           cleancss: true,
