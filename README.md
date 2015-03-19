@@ -78,6 +78,10 @@ The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these file
 
 See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https://www.patternfly.org/](https://www.patternfly.org/), and [http://getbootstrap.com/](http://getbootstrap.com/).
 
+### Browser and Device Support
+
+Since RCUE is based on PatternFly, and PatternFly is based on Bootstrap, RCUE supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
+
 ## License
 
 Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
