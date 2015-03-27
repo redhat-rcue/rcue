@@ -4,12 +4,8 @@
 // Bootstrap overrides and PatternFly-specific variables
 
 /* PatternFly specific */
-@btn-danger-bg-img-start:                                           @brand-danger;
-@btn-danger-bg-img-stop:                                            @btn-danger-bg;
 @btn-default-bg-img-start:                                          #fafafa;
 @btn-default-bg-img-stop:                                           #ededed;
-@btn-primary-bg-img-start:                                          @brand-primary;
-@btn-primary-bg-img-stop:                                           @btn-primary-bg;
 @btn-xs-font-weight:                                                400;
 @dropdown-divider-margin:                                           4px 1px;
 @dropdown-link-active-border-color:                                 #0076b7;
@@ -35,6 +31,7 @@
 @img-spinner-sm:                                                    "spinner-sm.gif";
 @img-spinner-xs:                                                    "spinner-xs.gif";
 @input-border-disabled:                                             #d4d4d4;
+@input-border-hover:                                                #7BB2DD;
 @list-group-top-border:                                             #e9e8e8;
 @login-bg-color:                                                    #080808;
 @login-container-bg-color:                                          #181818;
@@ -154,6 +151,7 @@
 @popover-border-color:                                              #bbb;
 @popover-max-width:                                                 220px;
 @popover-title-bg:                                                  #f5f5f5;
+@pre-bg:                                                            #fcfcfc;
 @progress-bg:                                                       #ededed;
 @table-bg-accent:                                                   #f5f5f5;
 @table-bg-hover:                                                    #d5ecf9;
@@ -163,8 +161,6 @@
 @tooltip-bg:                                                        #434343;
 @tooltip-max-width:                                                 220px;
 // References variable declared in blocks above
-@panel-primary-text:                                                @body-bg;
-// Reference variables declared in blocks above
 @alert-danger-bg:                                                   @body-bg;
 @alert-danger-border:                                               @brand-danger;
 @alert-danger-text:                                                 @gray-dark;
@@ -204,16 +200,26 @@
 @panel-info-border:                                                 @brand-info;
 @panel-info-heading-bg:                                             @brand-info;
 @panel-info-text:                                                   @panel-primary-text;
+@panel-primary-text:                                                @body-bg;
 @panel-success-border:                                              @brand-success;
 @panel-success-heading-bg:                                          @brand-success;
 @panel-success-text:                                                @panel-primary-text;
 @panel-warning-border:                                              @brand-warning;
 @panel-warning-heading-bg:                                          @brand-warning;
 @panel-warning-text:                                                @panel-primary-text;
+@state-warning-text:                                                @brand-warning;
 
 /* PatternFly-specific variables based on Bootstrap overides */
+@btn-danger-bg-img-start:                                           @brand-danger;
+@btn-danger-bg-img-stop:                                            @btn-danger-bg;
+@btn-primary-bg-img-start:                                          @brand-primary;
+@btn-primary-bg-img-stop:                                           @btn-primary-bg;
 @dropdown-link-focus-bg:                                            @link-color;
 @line-height-computed:                                              floor((@font-size-base * @line-height-base));
 @progress-sm:                                                       @line-height-computed - 6;
 @progress-xs:                                                       @line-height-computed - 14;
+@syntax-1:                                                          @btn-danger-bg;
+@syntax-2:                                                          @gray-dark;
+@syntax-3:                                                          @brand-success;
+@syntax-4:                                                          @brand-info;
 @tooltip-font-size:                                                 @font-size-base;

@@ -144,7 +144,7 @@ Make the dist:
 make dist
 ```
 
-Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directly.
+Copy the resulting tarball from the previous step to your rpmbuild/SOURCES directory.
 
 e.g., `cp patternfly-1.1.1.tar.gz ~/rpmbuild/SOURCES`
 
@@ -172,6 +172,10 @@ PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
 ## Documentation
 
 See [https://www.patternfly.org](https://www.patternfly.org) and [http://getbootstrap.com/](http://getbootstrap.com/).
+
+### Browser and Device Support
+
+Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 
 ### Product Backlog
 
