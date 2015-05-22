@@ -31,10 +31,7 @@
         <h1>Progress Bars</h1>
       </div>
       <div class="alert alert-warning">
-        <span class="pficon-layered">
-          <span class="pficon pficon-warning-triangle"></span>
-          <span class="pficon pficon-warning-exclamation"></span>
-        </span>
+        <span class="pficon pficon-warning-triangle-o"></span>
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a> and <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>.
       </div>
       <hr>
@@ -193,7 +190,7 @@
       </div>
 
       <div class="progress-description">
-        <span class="pficon pficon-ok"></span> <strong>Network Activity:</strong>  10.10.121.02
+        <span class="pficon pficon-ok" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></span> <strong>Network Activity:</strong>  10.10.121.02
       </div>
       <div class="progress progress-label-top-right">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
@@ -201,10 +198,7 @@
         </div>
       </div>
       <div class="progress-description">
-        <span class="pficon-layered">
-          <span class="pficon pficon-warning-triangle"></span>
-          <span class="pficon pficon-warning-exclamation"></span>
-        </span> 
+        <span class="pficon pficon-warning-triangle-o"></span>
         <strong>Network Activity:</strong>  10.10.121.02
       </div>
       <div class="progress progress-label-top-right">
@@ -213,10 +207,7 @@
         </div>
       </div>
       <div class="progress-description">
-        <span class="pficon-layered">
-          <span class="pficon pficon-error-octagon"></span>
-          <span class="pficon pficon-error-exclamation"></span>
-        </span> 
+        <span class="pficon pficon-error-circle-o"></span>
         <strong>Network Activity:</strong>  10.10.121.02
       </div>
       <div class="progress progress-label-top-right">
@@ -269,6 +260,12 @@
           </tr>
         </tbody>
       </table>
+      <script>
+        // Initialize Tooltip
+        jQuery(document).ready(function() {
+          jQuery('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
     </div><!-- /container -->
   </body>
 </html>
