@@ -14,6 +14,14 @@ bower install patternfly
 
 PatternFly is also available as an RPM.  See https://copr.fedoraproject.org/coprs/patternfly/patternfly1/.
 
+## AngularJS
+
+A set of [common AngularJS directives](https://github.com/patternfly/angular-patternfly) for use with PatternFly is available.
+
+## Sass and/or Rails
+
+A [Sass port of PatternFly](https://github.com/patternfly/patternfly-sass) is available, as is a [Sass-based Rails Gem](https://rubygems.org/gems/patternfly-sass).
+
 ## Dependencies
 
 PatternFly incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of PatternFly.
@@ -176,6 +184,11 @@ See [https://www.patternfly.org](https://www.patternfly.org) and [http://getboot
 ### Browser and Device Support
 
 Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
+
+*Important:*  the following features of PatternFly are not compatible with Internet Explorer 8:
+
+* [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)
+* Charts (which utilizes [C3.js](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
 
 ### Product Backlog
 
