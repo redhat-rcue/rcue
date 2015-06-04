@@ -82,6 +82,11 @@ See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https
 
 Since RCUE is based on PatternFly, and PatternFly is based on Bootstrap, RCUE supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support), plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 
+*Important:*  the following features of PatternFly are not compatible with Internet Explorer 8:
+
+* [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)
+* Charts (which utilizes [C3](http://c3js.org/) and [D3](https://github.com/mbostock/d3/wiki#browser--platform-support))
+
 ## License
 
 Modifications to Bootstrap are copyright 2013 Red Hat, Inc. and licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
