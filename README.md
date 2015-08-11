@@ -82,7 +82,7 @@ See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https
 
 Since RCUE is based on PatternFly, and PatternFly is based on Bootstrap, RCUE supports [the same browsers as Bootstrap](http://getbootstrap.com/getting-started/#support) **excluding Internet Explorer 8**, plus the latest version of [Firefox for Linux](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 
-*Important:*  starting with the v2.0.0 release, **PatternFly no longer supports Internet Explorer 8**.
+*Important:*  starting with the v2.0.0 release, **RCUE no longer supports Internet Explorer 8**.
 
 ## License
 
