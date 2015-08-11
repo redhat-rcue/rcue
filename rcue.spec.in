@@ -8,7 +8,7 @@
 	PKG_DATA_DIR=%{_datadir}/%{name} \\\
 	%{nil}
 
-Name:		rcue1
+Name:		rcue2
 Summary:	Red Hat Common User Interface (RCUE) and dependencies
 Version:	@PACKAGE_RPM_VERSION@
 Release:	@PACKAGE_RPM_RELEASE@%{?release_suffix}%{?dist}

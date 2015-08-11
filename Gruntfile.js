@@ -40,6 +40,30 @@ module.exports = function (grunt) {
         }
       }
     },
+    csscount: {
+      production: {
+        src: [
+          'dist/css/rcue*.min.css'
+        ],
+        options: {
+          maxSelectors: 4096
+        }
+      }
+    },
+    cssmin: {
+      production: {
+        files: [{
+          expand: true,
+          cwd: 'dist/css',
+          src: ['rcue*.css', '!*.min.css'],
+          dest: 'dist/css',
+          ext: '.min.css',
+        }],
+        options: {
+          sourceMap: true
+        }
+      }
+    },
     jekyll: {
       options: {
         src: 'components/patternfly/tests-src'
@@ -52,38 +76,46 @@ module.exports = function (grunt) {
       }
     },
     less: {
-      development: {
+      rcue: {
         files: {
           "dist/css/rcue.css": "less/rcue.less"
         },
         options: {
-          paths: ["less/"]
+          paths: ["less/"],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'dist/css/rcue.css.map',
+          sourceMapURL: 'rcue.css.map'
         }
       },
-      production: {
+      rcueAdditions: {
         files: {
-          "dist/css/rcue.min.css": "less/rcue.less"
+          "dist/css/rcue-additions.css": "less/rcue-additions.less"
         },
         options: {
-          cleancss: true,
-          paths: ["less/"]
+          paths: ["less/"],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'dist/css/rcue-additions.css.map',
+          sourceMapURL: 'rcue-additions.css.map'
         }
       }
     },
     watch: {
-      css: {
-        files: 'less/*.less',
-        tasks: ['less'],
-      },
       jekyll: {
         files: ['_config.yml', 'components/patternfly/tests-src/**/*'],
         tasks: ['jekyll']
       },
+      less: {
+        files: ['less/*.less', 'components/patternfly/less/*.less'],
+        tasks: ['less'],
+      },
+      css: {
+        files: ['dist/css/rcue*.css', 'dist/css/!*.min.css'],
+        tasks: ['cssmin', 'csscount']
+      },
       livereload: {
-        files: [
-          'dist/css/*.css',
-          'tests/*.html'
-        ]
+        files: ['dist/css/*.css', 'tests/*.html']
       },
       options: {
         livereload: 35730
@@ -93,7 +125,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'jekyll',
-    'less'
+    'less',
+    'cssmin',
+    'csscount'
   ]);
 
   grunt.registerTask('server', [
