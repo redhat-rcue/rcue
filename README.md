@@ -2,7 +2,7 @@
 
 The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
-This reference implementation of RCUE is based on [PatternFly](https://www.patternfly.org/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.
+This reference implementation of RCUE is based on [PatternFly](https://www.patternfly.org/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.  For information on how to quickly get started using RCUE, see the [Quick Start Guide](QUICKSTART.md).
 
 ## Dependencies
 
