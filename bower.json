@@ -5,7 +5,8 @@
   "license": "Apache-2.0",
   "homepage": "http://rcue-uxd.itos.redhat.com/",
   "main": [
-    "dist/css/rcue.css"
+    "dist/css/rcue.css",
+    "dist/css/rcue-additions.css"
   ],
   "ignore": [
     "**/.*",
@@ -21,7 +22,7 @@
     "_config.yml"
   ],
   "devDependencies": {
-    "patternfly": "~2.2.0"
+    "patternfly": "~2.3.0"
   },
   "private": true
 }
