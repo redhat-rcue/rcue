@@ -22,7 +22,7 @@
     "_config.yml"
   ],
   "devDependencies": {
-    "patternfly": "~2.3.0"
+    "patternfly": "~2.4.0"
   },
   "private": true
 }
