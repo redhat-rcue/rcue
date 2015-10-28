@@ -12,14 +12,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/components",
     "test",
     "tests",
-    "package.json",
-    "Gruntfile.js",
     "Makefile",
-    "rcue.spec.in",
-    "_config.yml"
+    "rcue.spec.in"
   ],
   "devDependencies": {
     "patternfly": "~2.5.0"
