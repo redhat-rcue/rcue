@@ -2700,6 +2700,9 @@ table.datatable th:active {
 .pficon-add-circle-o:before {
   content: "\e61b";
 }
+.pficon-build:before {
+  content: "\e902";
+}
 .pficon-builder-image:before {
   content: "\e800";
 }
@@ -3138,37 +3141,37 @@ table.datatable th:active {
   color: #ffffff;
 }
 @media (max-width: 767px) {
-  .navbar-pf .navbar-nav .active .navbar-persistent,
   .navbar-pf .navbar-nav .active .dropdown-menu,
+  .navbar-pf .navbar-nav .active .navbar-persistent,
   .navbar-pf .navbar-nav .open .dropdown-menu {
     background-color: #3c434a !important;
     margin-left: 0;
     padding-bottom: 0;
     padding-top: 0;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a,
   .navbar-pf .navbar-nav .active .dropdown-menu > .active > a,
+  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a,
   .navbar-pf .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu.open > a,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu.open > a,
-  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a:hover,
   .navbar-pf .navbar-nav .active .dropdown-menu > .active > a:hover,
+  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a:hover,
   .navbar-pf .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a:hover,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu.open > a:hover,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a:hover,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu.open > a:hover,
-  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a:focus,
   .navbar-pf .navbar-nav .active .dropdown-menu > .active > a:focus,
+  .navbar-pf .navbar-nav .active .navbar-persistent > .active > a:focus,
   .navbar-pf .navbar-nav .open .dropdown-menu > .active > a:focus,
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a:focus,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu.open > a:focus,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open > a:focus,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu.open > a:focus {
     background-color: #424950 !important;
     color: #ffffff;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent > li > a,
   .navbar-pf .navbar-nav .active .dropdown-menu > li > a,
+  .navbar-pf .navbar-nav .active .navbar-persistent > li > a,
   .navbar-pf .navbar-nav .open .dropdown-menu > li > a {
     background-color: transparent;
     border: 0;
@@ -3176,45 +3179,45 @@ table.datatable th:active {
     outline: none;
     padding-left: 30px;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent > li > a:hover,
   .navbar-pf .navbar-nav .active .dropdown-menu > li > a:hover,
+  .navbar-pf .navbar-nav .active .navbar-persistent > li > a:hover,
   .navbar-pf .navbar-nav .open .dropdown-menu > li > a:hover {
     color: #ffffff;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .divider,
   .navbar-pf .navbar-nav .active .dropdown-menu .divider,
+  .navbar-pf .navbar-nav .active .navbar-persistent .divider,
   .navbar-pf .navbar-nav .open .dropdown-menu .divider {
     background-color: #53565b;
     margin: 0 1px;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-header,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-header,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-header,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-header {
     padding-bottom: 0;
     padding-left: 30px;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open .dropdown-toggle,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu.open .dropdown-toggle,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.open .dropdown-toggle,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu.open .dropdown-toggle {
     color: #ffffff;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.pull-left,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu.pull-left,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu.pull-left,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu.pull-left {
     float: none !important;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu > a:after,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu > a:after,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu > a:after,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu > a:after {
     display: none;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-header,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu .dropdown-header,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-header,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-header {
     padding-left: 45px;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu .dropdown-menu,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu {
     border: 0;
     bottom: auto;
@@ -3230,14 +3233,14 @@ table.datatable th:active {
     right: auto;
     top: auto;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu > li > a,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu .dropdown-menu > li > a,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu > li > a,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu > li > a {
     padding: 5px 15px 5px 45px;
     line-height: 20px;
   }
-  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu .dropdown-menu > li > a,
   .navbar-pf .navbar-nav .active .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-menu > li > a,
+  .navbar-pf .navbar-nav .active .navbar-persistent .dropdown-submenu .dropdown-menu .dropdown-menu > li > a,
   .navbar-pf .navbar-nav .open .dropdown-menu .dropdown-submenu .dropdown-menu .dropdown-menu > li > a {
     padding-left: 60px;
   }
