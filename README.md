@@ -74,6 +74,48 @@ The `tests/` directory contains HTML pages with component and pattern examples i
 
 The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these files directly.  Changes to the test source files (`components/patternfly/tests-src/`) should be made upstream in PatternFly.
 
+## Release
+
+To release a new version version of RCUE, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
+
+Update the version listed in `bower.json` by editing the file and changing the line:
+
+```
+"version": "<new_version>"
+```
+
+Update the version listed in `package.json` by editing the file and changing the line:
+
+```
+"version": "<new_version>"
+```
+
+Update the `MAKEFILE` by editing the file and changing the following lines:
+
+```
+VERSION=<new_version>
+MILESTONE=
+# PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
+PACKAGE_RPM_RELEASE=1
+```
+
+Commit the version bump:
+
+```
+git commit -a -m "Version bump to <new_version>"
+```
+
+Tag and push upstream (assuming you have commit access):
+
+```
+git tag <new_version>
+git push && git push --tags
+```
+
+### RPM
+
+@gregsheremeta oversees creation of RCUE RPMs.
+
 ## Documentation
 
 See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https://www.patternfly.org/](https://www.patternfly.org/), and [http://getbootstrap.com/](http://getbootstrap.com/).
