@@ -2678,8 +2678,8 @@ table.datatable th:active {
 }
 @font-face {
   font-family: 'PatternFlyIcons-webfont';
-  src: url('../../components/patternfly/dist/fonts/PatternFlyIcons-webfont.eot');
-  src: url('../../components/patternfly/dist/fonts/PatternFlyIcons-webfont.eot?#iefix') format('embedded-opentype'), url('../../components/patternfly/dist/fonts/PatternFlyIcons-webfont.ttf') format('truetype'), url('../../components/patternfly/dist/fonts/PatternFlyIcons-webfont.woff') format('woff'), url('../../components/patternfly/dist/fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont') format('svg');
+  src: url('../fonts/PatternFlyIcons-webfont.eot');
+  src: url('../fonts/PatternFlyIcons-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/PatternFlyIcons-webfont.ttf') format('truetype'), url('../fonts/PatternFlyIcons-webfont.woff') format('woff'), url('../fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2771,9 +2771,6 @@ table.datatable th:active {
 .pficon-info:before {
   content: "\e604";
 }
-.pficon-kubernetes:before {
-  content: "\e627";
-}
 .pficon-memory:before {
   content: "\e908";
 }
@@ -2783,9 +2780,6 @@ table.datatable th:active {
 .pficon-ok:before {
   color: #3f9c35;
   content: "\e602";
-}
-.pficon-openshift:before {
-  content: "\e626";
 }
 .pficon-print:before {
   content: "\e612";
@@ -4694,7 +4688,6 @@ table.datatable th:active {
   padding-left: 0;
   padding-right: 0;
 }
-/* Bootstrap overrides */
 /* RCUE-specific */
 .login-pf {
   background-color: #1a1a1a;

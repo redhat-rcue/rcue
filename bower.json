@@ -1,6 +1,6 @@
 {
   "name": "rcue",
-  "version": "2.10.0",
+  "version": "3.0.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "http://rcue-uxd.itos.redhat.com/",
@@ -17,8 +17,8 @@
     "Makefile",
     "rcue.spec.in"
   ],
-  "devDependencies": {
-    "patternfly": "~2.9.0"
+  "dependencies": {
+    "patternfly": "3.0.0"
   },
   "private": true
 }

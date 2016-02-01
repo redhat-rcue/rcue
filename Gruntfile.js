@@ -40,6 +40,20 @@ module.exports = function (grunt) {
         }
       }
     },
+    copy: {
+      main: {
+        files: [
+          // copy Bootstrap font files
+          {expand: true, cwd: 'components/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy Font Awesome font files
+          {expand: true, cwd: 'components/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          // copy PatternFly font files
+          {expand: true, cwd: 'components/patternfly/dist/fonts/', src: ['**'], dest: 'dist/fonts/'},
+          // copy PatternFly less files
+          {expand: true, cwd: 'components/patternfly/less/', src: ['**'], dest: 'less/lib/patternfly/'},
+        ],
+      },
+    },
     csscount: {
       production: {
         src: [
@@ -102,6 +116,10 @@ module.exports = function (grunt) {
       }
     },
     watch: {
+      copy: {
+        files: 'components/**/*',
+        tasks: ['copy']
+      },
       jekyll: {
         files: ['_config.yml', 'components/patternfly/tests-src/**/*'],
         tasks: ['jekyll']
@@ -124,6 +142,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'copy',
     'jekyll',
     'less',
     'cssmin',

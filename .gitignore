@@ -7,6 +7,10 @@
 *.swn
 *.swo
 
+# Ignore local Bower packages
+components/
+bower_components/
+
 # Ignore local nodejs packages
 node_modules/
 
@@ -15,10 +19,3 @@ node_modules/
 nodevars.bat
 npm
 npm.cmd
-
-# Ignore build
-build/
-
-# Ignore output spec file
-rcue.spec
-

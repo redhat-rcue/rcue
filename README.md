@@ -6,19 +6,31 @@ This reference implementation of RCUE is based on [PatternFly](https://www.patte
 
 ## Dependencies
 
-RCUE incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of RCUE.
+RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
 
 ## Development
 
 Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
 
-### Install Bower
+### Install Bower Components
 
 After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
 
     npm install -g bower
 
-Bower is used to install and update RCUE's dependencies.
+Now that Bower is available, we can install the required development components:
+
+    bower install
+
+At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to RCUE itself, you're done.  Celebrate by working on integrating RCUE and its dependencies in your app!
+
+#### Keeping Bower Components Updated
+
+Anytime you pull a new version of RCUE, make sure you also run
+
+    bower update
+
+so you get the latest version of the components specified in bower.json.
 
 ### Install Development Dependencies
 
@@ -76,7 +88,7 @@ The HTML pages in `tests/` are generated using Jekyll.  Do *not* edit these file
 
 ## Release
 
-To release a new version version of RCUE, edit `bower.json`, `package.json`, and `MAKEFILE` accordingly.
+To release a new version version of RCUE, edit `bower.json` and `package.json`.
 
 Update the version listed in `bower.json` by editing the file and changing the line:
 
@@ -88,15 +100,6 @@ Update the version listed in `package.json` by editing the file and changing the
 
 ```
 "version": "<new_version>"
-```
-
-Update the `MAKEFILE` by editing the file and changing the following lines:
-
-```
-VERSION=<new_version>
-MILESTONE=
-# PACKAGE_RPM_RELEASE=0.0.$(MILESTONE)
-PACKAGE_RPM_RELEASE=1
 ```
 
 Commit the version bump:
@@ -111,10 +114,6 @@ Tag and push upstream (assuming you have commit access):
 git tag <new_version>
 git push && git push --tags
 ```
-
-### RPM
-
-@gregsheremeta oversees creation of RCUE RPMs.
 
 ## Documentation
 
