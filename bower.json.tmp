@@ -18,7 +18,7 @@
     "rcue.spec.in"
   ],
   "dependencies": {
-    "patternfly": "~3.3.0"
+    "patternfly": "3.2.0"
   },
   "private": true
 }
