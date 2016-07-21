@@ -80,7 +80,7 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
-        src: 'components/patternfly/tests-src'
+        src: 'components/patternfly/tests/pages'
       },
       tests: {
         options: {
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
         tasks: ['copy']
       },
       jekyll: {
-        files: ['_config.yml', 'components/patternfly/tests-src/**/*'],
+        files: ['_config.yml', 'components/patternfly/tests/pages/**/*'],
         tasks: ['jekyll']
       },
       less: {
