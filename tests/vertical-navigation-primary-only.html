@@ -4,7 +4,7 @@
 <html lang="en-us" class="layout-pf layout-pf-fixed">
   <!--<![endif]-->
     <head>
-    <title>Vertical Navigation with Persistent Secondary - Red Hat&reg; Common User Experience</title>
+    <title>Vertical Navigation with Primary Only - Red Hat&reg; Common User Experience</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="../dist/css/rcue.min.css" >
     <link rel="stylesheet" href="../dist/css/rcue-additions.min.css" >
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.6.0/jquery.matchHeight-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="../components/patternfly/dist/js/patternfly.min.js"></script>
   </head>
   <div class="toast-pf toast-pf-max-width toast-pf-top-right alert alert-warning alert-dismissable">
@@ -41,7 +41,8 @@
   </div>
 
   <body class="cards-pf">
-    <nav class="navbar navbar-pf-vertical">
+    
+  <nav class="navbar navbar-pf-vertical">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle">
       <span class="sr-only">Toggle navigation</span>
@@ -102,236 +103,54 @@
   </nav>
 </nav> <!--/.navbar-->
 
-<div class="nav-pf-vertical nav-pf-vertical-with-secondary-nav ">
+
+<div class="nav-pf-vertical
+     
+     
+     
+     ">
   <ul class="list-group">
-    <li class="list-group-item active">
-      <a href="#">
-        <span class="fa fa-dashboard"></span>
+    <li class="list-group-item">
+      <a>
+        <span class="fa fa-dashboard" data-toggle="tooltip" title="Dashboard"></span>
         <span class="list-group-item-value">Dashboard</span>
       </a>
     </li>
     <li class="list-group-item">
-      <a href="#">
-        <span class="pficon pficon-cluster"></span>
-        <span class="list-group-item-value">Clusters</span>
+      <a>
+        <span class="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
+        <span class="list-group-item-value">Dolor</span>
+      </a>
+    </li>
+    <li class="list-group-item active " data-target="#ipsum-secondary">
+      <a>
+        <span class="fa fa-space-shuttle" data-toggle="tooltip" title="Ipsum"></span>
+        <span class="list-group-item-value">Ipsum</span>
+      </a>
+      
+    </li>
+    <li class="list-group-item " data-target="#amet-secondary">
+      <a>
+        <span class="fa fa-paper-plane" data-toggle="tooltip" title="Amet"></span>
+        <span class="list-group-item-value">Amet</span>
+      </a>
+      
+    </li>
+    <li class="list-group-item">
+      <a>
+        <span class="fa fa-graduation-cap" data-toggle="tooltip" title="Adipscing"></span>
+        <span class="list-group-item-value">Adipscing</span>
       </a>
     </li>
     <li class="list-group-item">
-      <a href="#">
-        <span class="pficon pficon-screen"></span>
-        <span class="list-group-item-value">Hosts</span>
-      </a>
-    </li>
-    <li class="list-group-item persistent-secondary" data-target="#storage-secondary">
-      <a href="#">
-        <span class="pficon pficon-container-node"></span>
-        <span class="list-group-item-value">Storage</span>
-      </a>
-      <div id="storage-secondary" class="nav-pf-persistent-secondary">
-  <div class="persistent-secondary-header">
-    <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
-    <span>Storage</span>
-  </div>
-  <h5>File</h5>
-  <ul class="list-group">
-    <li class="list-group-item active">
-      <a href="#">
-        <span class="list-group-item-value">Volumes</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-error-circle-o"></span>
-            <span>1</span>
-          </div>
-          <div class="badge">
-            <span class="pficon pficon-warning-triangle-o"></span>
-            <span>3</span>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Bricks</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-warning-triangle-o"></span>
-            <span>3</span>
-          </div>
-          <span class="badge">12</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Quotas</span>
-        <div class="badge-container-pf">
-          <span class="badge">3</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Logical Volumes</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-error-circle-o"></span>
-            <span>1</span>
-          </div>
-          <span class="badge">10</span>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <h5>Object</h5>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Pools</span>
-        <div class="badge-container-pf">
-          <span class="badge">10</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">OSDs</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-error-circle-o"></span>
-            <span>1</span>
-          </div>
-          <div class="badge">
-            <span class="pficon pficon-warning-triangle-o"></span>
-            <span>3</span>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <h5>Block</h5>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">RBDs</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-warning-triangle-o"></span>
-            <span>2</span>
-          </div>
-          <span class="badge">14</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Quotas</span>
-        <div class="badge-container-pf">
-          <span class="badge">0</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Snapshots</span>
-        <div class="badge-container-pf">
-          <div class="badge">
-            <span class="pficon pficon-warning-triangle-o"></span>
-            <span>3</span>
-          </div>
-          <span class="badge">9</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Storage Profiles</span>
-        <div class="badge-container-pf">
-          <span class="badge">7</span>
-        </div>
+      <a>
+        <span class="fa fa-gamepad" data-toggle="tooltip" title="Lorem"></span>
+        <span class="list-group-item-value">Lorem</span>
       </a>
     </li>
   </ul>
 </div>
-
-    </li>
-    <li class="list-group-item persistent-secondary" data-target="#admin-secondary">
-      <a href="#">
-        <span class="fa fa-cog"></span>
-        <span class="list-group-item-value">Admin</span>
-      </a>
-      <div id="admin-secondary" class="nav-pf-persistent-secondary">
-  <div class="persistent-secondary-header">
-    <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
-    <span>Admin</span>
-  </div>
-  <h5>User Administration</h5>
-  <ul class="list-group">
-    <li class="list-group-item active">
-      <a href="#">
-        <span class="list-group-item-value">Users</span>
-        <div class="badge-container-pf">
-          <span class="badge">10</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Groups</span>
-        <div class="badge-container-pf">
-          <span class="badge">3</span>
-        </div>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Roles</span>
-        <div class="badge-container-pf">
-          <span class="badge">5</span>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <h5>Storage</h5>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Local Storage</span>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">History</span>
-        <div class="badge-container-pf">
-          <span class="badge">0</span>
-        </div>
-      </a>
-    </li>
-  </ul>
-
-  <h5>Preferences</h5>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Appearance</span>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Notifications</span>
-      </a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">
-        <span class="list-group-item-value">Sound</span>
-      </a>
-    </li>
-  </ul>
-</div>
-
-    </li>
-  </ul>
-</div>
-<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-secondary ">
+<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-sub-menus   ">
         <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
         <div class="col-xs-12 col-sm-6 col-md-3">
@@ -952,9 +771,6 @@
     $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
     $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
     $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-
-    // initialize tooltips
-    $('[data-toggle="tooltip"]').tooltip();
 
     // Initialize the vertical navigation
     $().setupVerticalNavigation(true);
