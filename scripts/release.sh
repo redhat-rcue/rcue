@@ -160,7 +160,7 @@ cat <<- EEOOFF
     OPTIONS:
     h       Display this message (default) 
     f       Force push to new repo branch (e.g., bump-v3.7.0)
-    s       Skip repo setup (e.g., to rebuild previously created repo)
+    s       Skip new clone, clean, and install to rebuild previously created repo
     v       The version number (e.g., 3.7.0)
 
 EEOOFF
@@ -199,8 +199,12 @@ EEOOFF
 
   bump_bower
   bump_package
-  clean
-  install
+
+  if [ -z "$SETUP" ]; then
+    clean
+    install
+  fi
+
   build
   shrinkwrap
 
