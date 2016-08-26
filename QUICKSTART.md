@@ -43,27 +43,22 @@ This swap will brake your project paths, but don't worry! it's an easy fix we wi
 
 RCUE includes a number of dependencies that are not committed to this repository.
 
-You'll need node and bower to get them. If you do not already have nodejs and npm, you can easily do it by getting the [node installer](https://nodejs.org/en/).
+You'll need node and npm to get them. If you do not already have nodejs and npm, you can easily do it by getting the [node installer](https://nodejs.org/en/).
 
-### Install Bower Components
+### Install NPM Dependencies
 
-After ensuring [nodejs](https://nodejs.org/en/) is available, install Bower globally:
-```
-npm install -g bower
-```
-
-Now that Bower is available, we can install the required development components:
+Now that NPM is available, we can install the required development components:
 
 ```
-bower install
+npm install
 ```
 
-At this point, you should now have a top level `components/` folder with all dependencies listed in the `bower.json` file installed.
+At this point, you should now have a top level `node_modules/` folder with all dependencies listed in the `package.json` file installed.
 
 
 ```
 rcue/
-├── components/
+├── node_modules/
 │   ├── third-party repos (may need to pull in additional JS includes based on usage, but no additional CSS includes are needed)
 ├── dist/
 │   ├── css/
@@ -77,12 +72,12 @@ rcue/
     ├── example markup source files
 ```
 
-### Keeping Bower Components Updated
+### Keeping NPM Dependencies Updated
 
 Anytime you pull a new version of RCUE, make sure you also run
 
 ```
-bower update
+npm update
 ```
 
 so you get the latest version of the components specified in bower.json.
@@ -103,42 +98,42 @@ Your last task is to change the paths of your project and point them to the new 
 2. Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
 
         <!-- jQuery -->
-        <script src="PATH-TO/components/patternfly/components/jquery/dist/jquery.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/jquery/dist/jquery.js"></script>
 
         <!-- Bootstrap JS -->
-        <script src="PATH-TO/components/patternfly/components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
         <!-- C3, D3 - Charting Libraries -->
-        <script src="PATH-TO/components/patternfly/components/c3/c3.min.js"></script>
-        <script src="PATH-TO/components/patternfly/components/d3/d3.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/c3/c3.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/d3/d3.min.js"></script>
 
         <!-- Datatables, jQuery Grid Component -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="PATH-TO/components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
-        <script src="PATH-TO/components/patternfly/components/datatables-colvis/js/dataTables.colVis.js"></script>
-        <script src="PATH-TO/components/patternfly/components/datatables-colreorder/js/dataTables.colReorder.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/datatables/media/js/jquery.dataTables.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
 
         <!-- Patternfly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="PATH-TO/components/patternfly/dist/js/patternfly.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/dist/js/patternfly.js"></script>
 
         <!-- Bootstrap Date Picker -->
-        <script src="PATH-TO/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
         <!-- Bootstrap Combobox -->
-        <script src="PATH-TO/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
 
         <!-- Bootstrap Select -->
-        <script src="PATH-TO/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="PATH-TO/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
-        <script src="PATH-TO/components/patternfly/components/google-code-prettify/bin/prettify.min.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/google-code-prettify/bin/prettify.min.js"></script>
 
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
-        <script src="PATH-TO/components/patternfly/components/matchHeight/jquery.matchHeight.js"></script>
+        <script src="PATH-TO/node_modules/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight.js"></script>
 
         <!-- Angular Application? You May Want to Consider Pulling Angular-Patternfly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
