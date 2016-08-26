@@ -44,13 +44,13 @@ module.exports = function (grunt) {
       main: {
         files: [
           // copy Bootstrap font files
-          {expand: true, cwd: 'components/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          {expand: true, cwd: 'node_modules/patternfly/node_modules/bootstrap/dist/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy Font Awesome font files
-          {expand: true, cwd: 'components/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
+          {expand: true, cwd: 'node_modules/patternfly/node_modules/font-awesome/fonts/', src: ['*'], dest: 'dist/fonts/'},
           // copy PatternFly font files
-          {expand: true, cwd: 'components/patternfly/dist/fonts/', src: ['**'], dest: 'dist/fonts/'},
+          {expand: true, cwd: 'node_modules/patternfly/dist/fonts/', src: ['**'], dest: 'dist/fonts/'},
           // copy PatternFly less files
-          {expand: true, cwd: 'components/patternfly/less/', src: ['**'], dest: 'less/lib/patternfly/'},
+          {expand: true, cwd: 'node_modules/patternfly/less/', src: ['**'], dest: 'less/lib/patternfly/'},
         ],
       },
     },
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
-        src: 'components/patternfly/tests/pages'
+        src: 'node_modules/patternfly/tests/pages'
       },
       tests: {
         options: {
@@ -117,15 +117,15 @@ module.exports = function (grunt) {
     },
     watch: {
       copy: {
-        files: 'components/**/*',
+        files: 'node_modules/**/*',
         tasks: ['copy']
       },
       jekyll: {
-        files: ['_config.yml', 'components/patternfly/tests/pages/**/*'],
+        files: ['_config.yml', 'node_modules/patternfly/tests/pages/**/*'],
         tasks: ['jekyll']
       },
       less: {
-        files: ['less/*.less', 'components/patternfly/less/*.less'],
+        files: ['less/*.less', 'node_modules/patternfly/less/*.less'],
         tasks: ['less'],
       },
       css: {
