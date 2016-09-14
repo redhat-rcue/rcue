@@ -76,6 +76,11 @@ clean()
   if [ -d components ]; then
     rm -rf components
   fi
+
+  # shrinkwrap
+  if [ -s $SHRINKWRAP_JSON ]; then
+    rm -f $SHRINKWRAP_JSON
+  fi
 }
 
 # Install dependencies
