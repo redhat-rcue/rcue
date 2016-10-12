@@ -121,9 +121,9 @@
       "optional": true
     },
     "patternfly": {
-      "version": "3.11.0",
-      "from": "patternfly@>=3.11.0 <3.12.0",
-      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.11.0.tgz"
+      "version": "3.12.0",
+      "from": "patternfly@>=3.12.0 <3.13.0",
+      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.12.0.tgz"
     },
     "patternfly-bootstrap-combobox": {
       "version": "1.1.7",
@@ -132,9 +132,9 @@
       "optional": true
     },
     "patternfly-bootstrap-treeview": {
-      "version": "2.0.0",
-      "from": "patternfly-bootstrap-treeview@>=2.0.0 <2.1.0",
-      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.0.0.tgz",
+      "version": "2.1.0",
+      "from": "patternfly-bootstrap-treeview@>=2.1.0 <2.2.0",
+      "resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.0.tgz",
       "optional": true
     }
   }
