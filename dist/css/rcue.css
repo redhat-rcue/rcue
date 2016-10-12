@@ -9302,6 +9302,14 @@ fieldset[disabled] .btn-primary.active {
 .dropdown-menu > .disabled > a:focus {
   border-color: transparent;
 }
+.dropdown-menu > .selected > a {
+  background-color: #0088ce;
+  border-color: #0088ce;
+  color: #fff;
+}
+.dropdown-menu > .selected > a small {
+  color: rgba(255, 255, 255, 0.5);
+}
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
   border-color: transparent;
@@ -9425,6 +9433,10 @@ fieldset[disabled] .btn-primary.active {
 .chars-warn-remaining-pf {
   color: #cc0000;
 }
+.fields-status-pf {
+  color: #8b8d8f;
+  margin-bottom: 15px;
+}
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -9487,6 +9499,14 @@ fieldset[disabled] .form-control:hover {
 }
 label {
   font-weight: 600;
+}
+label.required-pf:after {
+  color: #cc0000;
+  content: "*";
+  margin-left: 3px;
+}
+span.required-pf {
+  color: #cc0000;
 }
 .label {
   border-radius: 0;
