@@ -37,7 +37,7 @@ RCUE provides compiled CSS (`rcue.*`), as well as compiled and minified CSS (`rc
 ## 3. Replace PatternFly with RCUE
 Look for the PatternFly folder on your project and replace it with the RCUE folder you've just downloaded.
 
-This swap will brake your project paths, but don't worry! it's an easy fix we will discuss later on.
+This swap will break your project paths, but don't worry! it's an easy fix we will discuss later on.
 
 ## 4. Get the dependencies
 
