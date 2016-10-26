@@ -3068,6 +3068,9 @@ table.datatable th:active {
 .pficon-delete:before {
   content: "\e611";
 }
+.pficon-domain:before {
+  content: "\e919";
+}
 .pficon-edit:before {
   content: "\e60a";
 }
@@ -3170,6 +3173,9 @@ table.datatable th:active {
 }
 .pficon-server:before {
   content: "\e90d";
+}
+.pficon-server-group:before {
+  content: "\e91a";
 }
 .pficon-service:before {
   content: "\e61e";
@@ -5666,7 +5672,7 @@ a.disabled {
   box-shadow: 0 0 3px rgba(3, 3, 3, 0.15);
   display: block !important;
 }
-.nav-pf-vertical .hide-nav-pf {
+.nav-pf-vertical.hide-nav-pf {
   visibility: hidden !important;
 }
 .nav-pf-vertical .list-group {
@@ -5692,6 +5698,12 @@ a.disabled {
   position: relative;
   white-space: nowrap;
   width: 200px;
+}
+@supports (display: flex) {
+  .nav-pf-vertical .list-group-item > a {
+    display: flex;
+    padding-right: 0;
+  }
 }
 .nav-pf-vertical .list-group-item > a .fa,
 .nav-pf-vertical .list-group-item > a .glyphicon,
@@ -5741,6 +5753,13 @@ a.disabled {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@supports (display: flex) {
+  .nav-pf-vertical .list-group-item .list-group-item-value {
+    flex: 1;
+    max-width: none;
+    padding-right: 15px;
+  }
+}
 .nav-pf-vertical .list-group-item-separator {
   border-top-color: #030303;
   border-top-width: 2px;
@@ -5770,6 +5789,16 @@ a.disabled {
   position: absolute;
   right: 15px;
   top: 20px;
+}
+@supports (display: flex) {
+  .nav-pf-vertical .badge-container-pf {
+    padding-left: 0;
+    padding-right: 15px;
+    position: relative;
+    right: 0;
+    margin-top: -3px;
+    top: 5px;
+  }
 }
 .nav-pf-vertical .badge-container-pf .badge {
   background: #292e34;
@@ -5913,6 +5942,11 @@ a.disabled {
   position: absolute;
   right: 20px;
   top: 0;
+}
+@supports (display: flex) {
+  .secondary-nav-item-pf > a .list-group-item-value {
+    padding-right: 35px;
+  }
 }
 .secondary-nav-item-pf.active > a,
 .secondary-nav-item-pf:hover > a {
@@ -6165,6 +6199,11 @@ a.disabled {
   position: absolute;
   right: 20px;
   top: 4px;
+}
+@supports (display: flex) {
+  .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf > a .list-group-item-value {
+    padding-right: 35px;
+  }
 }
 .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf.active > a,
 .nav-pf-secondary-nav .list-group-item.tertiary-nav-item-pf:hover > a {
