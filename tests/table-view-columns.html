@@ -4,7 +4,7 @@
 <html lang="en-us">
 <!--<![endif]-->
   <head>
-    <title>Data Tables - Red Hat&reg; Common User Experience</title>
+    <title>Table View [Deprecated example] with column visibility, reordering - Red Hat&reg; Common User Experience</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,30 +25,33 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
     <link rel="stylesheet" href="../dist/css/rcue.min.css" >
     <link rel="stylesheet" href="../dist/css/rcue-additions.min.css" >
+      <link href="tests.css" rel="stylesheet" media="screen, print">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/colvis/1.1.2/js/dataTables.colVis.min.js"></script>
+    <script src="//cdn.datatables.net/colreorder/1.3.2/js/dataTables.colReorder.min.js"></script>
     <script src="../components/patternfly/dist/js/patternfly.min.js"></script>
   </head>
 
   <body>
     <div class="container">
       <div class="page-header">
-        <h1>Data Tables</h1>
+        <h1>Table View [Deprecated example] with column visibility, reordering</h1>
       </div>
       <div class="alert alert-warning">
         <span class="pficon pficon-warning-triangle-o"></span>
         These examples are included for development testing purposes.  For official documentation, see <a href="https://www.patternfly.org" class="alert-link">https://www.patternfly.org</a>, <a href="http://getbootstrap.com" class="alert-link">http://getbootstrap.com</a>, and <a href="http://datatables.net" class="alert-link">http://datatables.net</a>.
       </div>
       <hr>
-<table class="datatable table table-striped table-bordered">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Rendering engine</th>
+      <th>Rendering Engine</th>
       <th>Browser</th>
       <th>Platform(s)</th>
-      <th>Engine version</th>
-      <th>CSS grade</th>
+      <th>Engine Version</th>
+      <th>CSS Grade</th>
     </tr>
   </thead>
   <tbody>
@@ -460,10 +463,30 @@
     </tr>
   </tbody>
 </table>
+
       <script>
-        // Initialize Datatables
         $(document).ready(function() {
-          $('.datatable').dataTable();
+          // Initialize Datatables
+          var table = $('table').DataTable({
+            // Customize the header and footer
+            "dom": 'R<"dataTables_header"fCi>t<"dataTables_footer"p>',
+            // Customize the ColVis button text so it's an icon and align the dropdown to the right side
+            "colVis": {
+              "buttonText": "<i class='fa fa-columns'></i>",
+              "sAlign": "right"
+            }
+          });
+          // On click of ColVis_Button, add Bootstrap classes and...
+          $(".ColVis_Button").addClass("btn btn-default dropdown-toggle").click(function() {
+            // Add Bootstrap classes to ColVis_Button's parent
+            $(this).parent(".ColVis").addClass("btn-group open");
+            // Add Bootstrap classes to the checkboxes
+            $(".ColVis_collection label").addClass("checkbox");
+            // Remove class from ColVis when clicking outside ColVis_Collection
+            $(".ColVis_collectionBackground, .ColVis_catcher").click(function() {
+              $(".ColVis").removeClass("open");
+            });
+          });
         });
       </script>
 
