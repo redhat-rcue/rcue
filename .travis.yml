@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '4'
+
+before_install:
+  - rvm install 2.3.1
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+  - npm install -g bower grunt-cli
+
+script:
+  - sh -x ./scripts/build.sh
+
+after_success:
+
