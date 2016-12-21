@@ -4,6 +4,8 @@
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.6.3",
     "patternfly": "~3.16.0"
   },
   "devDependencies": {
@@ -19,6 +21,15 @@
     "matchdep": "~0.3.0",
     "nsp": "^2.6.1",
     "patternfly-eng-release": "~3.16.0"
+  },
+  "optionalDependencies": {
+    "bootstrap-datepicker": "~1.6.4",
+    "bootstrap-select": "~1.10.0",
+    "bootstrap-switch": "~3.3.2",
+    "bootstrap-touchspin": "~3.1.1",
+    "c3": "~0.4.11",
+    "eonasdan-bootstrap-datetimepicker": "~4.15.35",
+    "patternfly-bootstrap-combobox": "~1.1.7"
   },
   "description": "The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.",
   "repository": {
