@@ -1218,13 +1218,10 @@ select.selectpicker {
   position: absolute !important;
   top: 0;
   left: 0;
+  margin: 0;
+  z-index: -1;
   opacity: 0;
   filter: alpha(opacity=0);
-  z-index: -1;
-}
-.bootstrap-switch input[type='radio'].form-control,
-.bootstrap-switch input[type='checkbox'].form-control {
-  height: auto;
 }
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
@@ -3024,6 +3021,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cpu:before {
   content: "\e905";
 }
+.pficon-degraded:before {
+  content: "\e91b";
+}
 .pficon-delete:before {
   content: "\e611";
 }
@@ -3092,6 +3092,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-project:before {
   content: "\e622";
+}
+.pficon-rebalance:before {
+  content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
