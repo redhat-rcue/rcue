@@ -20,9 +20,9 @@
       "optional": true
     },
     "bootstrap-switch": {
-      "version": "3.3.2",
+      "version": "3.3.3",
       "from": "bootstrap-switch@>=3.3.2 <3.4.0",
-      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.2.tgz",
+      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.3.tgz",
       "optional": true
     },
     "bootstrap-touchspin": {
@@ -47,15 +47,7 @@
       "version": "4.15.35",
       "from": "eonasdan-bootstrap-datetimepicker@>=4.15.35 <4.16.0",
       "resolved": "https://registry.npmjs.org/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.15.35.tgz",
-      "optional": true,
-      "dependencies": {
-        "jquery": {
-          "version": "2.1.4",
-          "from": "jquery@>=1.8.3 <2.2.0",
-          "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz",
-          "optional": true
-        }
-      }
+      "optional": true
     },
     "font-awesome": {
       "version": "4.6.3",
@@ -63,9 +55,9 @@
       "resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.6.3.tgz"
     },
     "jquery": {
-      "version": "3.1.1",
-      "from": "jquery@>=1.7.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.1.1.tgz",
+      "version": "1.12.4",
+      "from": "jquery@>=1.12.4 <2.0.0",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-1.12.4.tgz",
       "optional": true
     },
     "moment": {
