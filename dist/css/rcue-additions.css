@@ -1218,13 +1218,10 @@ select.selectpicker {
   position: absolute !important;
   top: 0;
   left: 0;
+  margin: 0;
+  z-index: -1;
   opacity: 0;
   filter: alpha(opacity=0);
-  z-index: -1;
-}
-.bootstrap-switch input[type='radio'].form-control,
-.bootstrap-switch input[type='checkbox'].form-control {
-  height: auto;
 }
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,
@@ -3024,6 +3021,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cpu:before {
   content: "\e905";
 }
+.pficon-degraded:before {
+  content: "\e91b";
+}
 .pficon-delete:before {
   content: "\e611";
 }
@@ -3092,6 +3092,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-project:before {
   content: "\e622";
+}
+.pficon-rebalance:before {
+  content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
@@ -3435,6 +3438,48 @@ a.disabled {
   color: #8b8d8f;
   cursor: not-allowed;
   text-decoration: none;
+}
+.list-pf {
+  border-bottom: 1px solid #ededed;
+}
+.list-pf-item {
+  border-color: #ededed;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: none;
+}
+.list-pf-item:hover {
+  background-color: #fafafa;
+}
+.list-pf-item.active {
+  background-color: #ededed;
+  border-color: #bbb;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.list-pf-expansion {
+  background-color: #fff;
+}
+.list-pf-container {
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+.list-pf-expansion .list-pf-container {
+  border-top: 1px solid #bbb;
+}
+.list-pf-chevron {
+  margin-right: 5px;
+}
+.list-pf-chevron + .list-pf-content {
+  border-left: 1px solid #bbb;
+  padding-left: 15px;
+}
+.list-pf-chevron .fa {
+  font-size: 22px;
+  width: 20px;
 }
 .list-view-pf .list-group-item {
   align-items: flex-start;
@@ -6808,6 +6853,9 @@ table.dataTable th:active {
   border: none;
   left: 0;
   right: 0;
+}
+.wizard-pf-contents textarea {
+  resize: vertical;
 }
 /* styles the content of a review page */
 .wizard-pf-review-steps {
