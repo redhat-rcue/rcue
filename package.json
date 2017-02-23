@@ -29,7 +29,8 @@
     "bootstrap-touchspin": "~3.1.1",
     "c3": "~0.4.11",
     "eonasdan-bootstrap-datetimepicker": "~4.15.35",
-    "patternfly-bootstrap-combobox": "~1.1.7"
+    "patternfly-bootstrap-combobox": "~1.1.7",
+    "jquery": "^1.12.4"
   },
   "description": "The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.",
   "repository": {
