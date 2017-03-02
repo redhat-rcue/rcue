@@ -20,5 +20,8 @@
   "dependencies": {
     "patternfly": "~3.21.0"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "jquery": "~2.1.4"
+  }
 }
