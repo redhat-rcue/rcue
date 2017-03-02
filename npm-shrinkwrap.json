@@ -1,6 +1,6 @@
 {
   "name": "rcue",
-  "version": "3.21.0",
+  "version": "3.22.1",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -20,9 +20,9 @@
       "optional": true
     },
     "bootstrap-switch": {
-      "version": "3.3.3",
+      "version": "3.3.4",
       "from": "bootstrap-switch@>=3.3.2 <3.4.0",
-      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.3.tgz",
+      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.4.tgz",
       "optional": true
     },
     "bootstrap-touchspin": {
@@ -67,9 +67,9 @@
       "optional": true
     },
     "patternfly": {
-      "version": "3.21.0",
-      "from": "patternfly@>=3.21.0 <3.22.0",
-      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.21.0.tgz",
+      "version": "3.22.1",
+      "from": "patternfly@>=3.22.1 <3.23.0",
+      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.22.1.tgz",
       "dependencies": {
         "bootstrap": {
           "version": "3.3.7",
