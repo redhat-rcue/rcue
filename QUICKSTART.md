@@ -16,7 +16,7 @@ npm install rcue --save
 
 ### What's Included
 
-Within the node_module/rcue/dist folder you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+Within the `node_module/rcue/dist` folder you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
 rcue/
@@ -47,48 +47,48 @@ Your last task is to change the paths of your project and point them to the new 
 
         <!-- RCUE Styles -->
         <!-- Note: No other CSS files are needed regardless of what other JS packages you decide to pull in -->
-        <link rel="stylesheet" href="PATH-TO/dist/css/rcue.min.css" />
-        <link rel="stylesheet" href="PATH-TO/dist/css/rcue-additions.min.css" />
+        <link rel="stylesheet" href="PATH-TO/node_modules/rcue/dist/css/rcue.min.css" />
+        <link rel="stylesheet" href="PATH-TO/node_modules/rcue/dist/css/rcue-additions.min.css" />
 
 2. Add the following script includes to your HTML file(s), adjusting where necessary to pull in only what you need:
 
         <!-- jQuery -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/jquery/dist/jquery.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/jquery/dist/jquery.js"></script>
 
         <!-- Bootstrap JS -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
         <!-- C3, D3 - Charting Libraries -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/c3/c3.min.js"></script>
-        <script src="PATH-TO/node_modules/patternfly/node_modules/d3/d3.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/c3/c3.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/d3/d3.min.js"></script>
 
         <!-- Datatables, jQuery Grid Component -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/datatables/media/js/jquery.dataTables.js"></script>
-        <script src="PATH-TO/node_modules/patternfly/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
-        <script src="PATH-TO/node_modules/patternfly/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/datatables/media/js/jquery.dataTables.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
 
         <!-- Patternfly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
         <!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-        <script src="PATH-TO/node_modules/patternfly/dist/js/patternfly.js"></script>
+        <script src="PATH-TO/node_modules/rcue/dist/js/patternfly.js"></script>
 
         <!-- Bootstrap Date Picker -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
         <!-- Bootstrap Combobox -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
 
         <!-- Bootstrap Select -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
         <!-- Bootstrap Tree View -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
         <!-- Google Code Prettify - Syntax highlighting of code snippets -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/google-code-prettify/bin/prettify.min.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/google-code-prettify/bin/prettify.min.js"></script>
 
         <!-- MatchHeight - Used to make sure dashboard cards are the same height -->
-        <script src="PATH-TO/node_modules/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight.js"></script>
+        <script src="PATH-TO/node_modules/rcue/node_modules/jquery-match-height/dist/jquery.matchHeight.js"></script>
 
         <!-- Angular Application? You May Want to Consider Pulling Angular-Patternfly And Angular-UI Bootstrap instead of bootstrap.js -->
         <!-- See https://github.com/patternfly/angular-patternfly for more information -->
