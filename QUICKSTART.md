@@ -4,19 +4,19 @@ RCUE is based on [PatternFly](https://www.patternfly.org/), which is based on [B
 
 This guide will walk the steps to go from a PatternFly to RCUE styles:
 
-## 1. Make a copy of your project
-The first step is to make a copy of your PatternFly based project.
-This is where you will replace PatternFly by RCUE.
+## 1. Installation
 
-## 2. Get RCUE repo
-Now it's time to get the code from the [RCUE git repository on GitHub](https://github.com/patternfly/rcue). You can download it, fork it or clone it.
+### Get RCUE
 
-RCUE is a private repository, if you don't have access please cotact [the UXD team](mailto:uxd-team@redhat.com) and ask for access.
+RCUE can be installed and managed through [NPM](https://www.npmjs.com/). To do so, either add `rcue` as a dependency in your `package.json` or run the following:
 
+```
+npm install rcue --save
+```
 
 ### What's Included
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+Within the node_module/rcue/dist folder you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
 ```
 rcue/
@@ -28,63 +28,18 @@ rcue/
 │   │   │── branding materials and loading indicators
 ├── less/
 │   ├── variables, mixin, and component Less files (may need to include if you want to customize the already built CSS)
-└── test-src/
+└── tests/
     ├── example markup source files
 ```
 
 RCUE provides compiled CSS (`rcue.*`), as well as compiled and minified CSS (`rcue.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`rcue.*.map`) are available for use with certain browsers' developer tools.
 
-## 3. Replace PatternFly with RCUE
+## 2. Replace PatternFly with RCUE
 Look for the PatternFly folder on your project and replace it with the RCUE folder you've just downloaded.
 
 This swap will break your project paths, but don't worry! it's an easy fix we will discuss later on.
 
-## 4. Get the dependencies
-
-RCUE includes a number of dependencies that are not committed to this repository.
-
-You'll need node and npm to get them. If you do not already have nodejs and npm, you can easily do it by getting the [node installer](https://nodejs.org/en/).
-
-### Install NPM Dependencies
-
-Now that NPM is available, we can install the required development components:
-
-```
-npm install
-```
-
-At this point, you should now have a top level `node_modules/` folder with all dependencies listed in the `package.json` file installed.
-
-
-```
-rcue/
-├── node_modules/
-│   ├── third-party repos (may need to pull in additional JS includes based on usage, but no additional CSS includes are needed)
-├── dist/
-│   ├── css/
-│   │   │── rcue.min.css (* need to include)
-│   │   │── rcue-additions.min.css (* need to include)
-│   └── img/
-│   │   │── branding materials and loading indicators
-├── less/
-│   ├── variables, mixin, and component Less files (may need to include if you want to customize the already built CSS)
-└── test-src/
-    ├── example markup source files
-```
-
-### Keeping NPM Dependencies Updated
-
-Anytime you pull a new version of RCUE, make sure you also run
-
-```
-npm update
-```
-
-so you get the latest version of the components specified in bower.json.
-
-Celebrate by working on integrating RCUE and its dependencies in your app!
-
-## 5. Using RCUE In Your Application
+## 3. Using RCUE In Your Application
 
 Your last task is to change the paths of your project and point them to the new RCUE folder.
 
