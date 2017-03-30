@@ -9047,6 +9047,12 @@ button.close {
   overflow: visible;
   clip: auto;
 }
+.text-overflow-pf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
 .alert {
   border-width: 1px;
   padding-left: 47px;
