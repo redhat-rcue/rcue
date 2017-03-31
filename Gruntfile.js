@@ -7,6 +7,8 @@ var mountFolder = function (connect, dir) {
 };
 
 module.exports = function (grunt) {
+  'use strict';
+
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -38,6 +40,16 @@ module.exports = function (grunt) {
           },
           port: 9001
         }
+      }
+    },
+    run: {
+      options: {
+      },
+      bundleInstall: {
+        cmd: 'bundle',
+        args: [
+          'install'
+        ]
       }
     },
     copy: {
@@ -80,7 +92,8 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
-        src: 'node_modules/patternfly/tests/pages'
+        src: 'node_modules/patternfly/tests/pages',
+        bundleExec: 'true'
       },
       tests: {
         options: {
@@ -148,6 +161,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'run:bundleInstall',
     'copy',
     'jekyll',
     'less',
