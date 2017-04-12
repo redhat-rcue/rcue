@@ -6999,7 +6999,7 @@ table.dataTable th:active {
   font-size: 12px;
   font-weight: 700;
   height: 25px;
-  left: calc(37%);
+  left: calc(50% - 13px);
   line-height: 22px;
   position: absolute;
   top: 27px;
