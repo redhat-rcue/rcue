@@ -1156,8 +1156,8 @@ select.selectpicker {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block !important;
-  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
   padding: 2px 6px;
   font-size: 12px;
   line-height: 20px;
@@ -1205,6 +1205,9 @@ select.selectpicker {
   color: #4d5258;
   background: #f1f1f1;
 }
+.bootstrap-switch span::before {
+  content: "\200b";
+}
 .bootstrap-switch .bootstrap-switch-handle-on {
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
@@ -1222,6 +1225,7 @@ select.selectpicker {
   z-index: -1;
   opacity: 0;
   filter: alpha(opacity=0);
+  visibility: hidden;
 }
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off,

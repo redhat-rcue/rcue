@@ -20,9 +20,9 @@
       "optional": true
     },
     "bootstrap-switch": {
-      "version": "3.3.3",
+      "version": "3.3.4",
       "from": "bootstrap-switch@>=3.3.2 <3.4.0",
-      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.3.tgz",
+      "resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.4.tgz",
       "optional": true
     },
     "bootstrap-touchspin": {
