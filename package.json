@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "~3.3.7",
     "font-awesome": "~4.6.3",
-    "patternfly": "~3.24.0"
+    "patternfly": "3.25.0"
   },
   "devDependencies": {
     "connect-livereload": "~0.3.0",
