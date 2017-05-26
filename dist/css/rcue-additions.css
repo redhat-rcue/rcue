@@ -3864,7 +3864,7 @@ a.disabled {
 .list-pf-select .fa {
   font-size: 22px;
 }
-.list-pf-content {
+.list-pf-content-flex {
   align-items: flex-start;
   display: flex;
   flex-grow: 1;
@@ -3873,7 +3873,7 @@ a.disabled {
   min-width: 0;
 }
 @media (min-width: 992px) {
-  .list-pf:not(.list-pf-stacked) .list-pf-content {
+  .list-pf:not(.list-pf-stacked) .list-pf-content-flex {
     align-items: center;
   }
 }
@@ -4075,14 +4075,10 @@ a.disabled {
 .list-view-pf-additional-info-item {
   align-items: center;
   display: inline-block;
+  display: flex;
   margin-right: 20px;
   max-width: 100%;
   text-align: center;
-}
-@supports (display: flex) {
-  .list-view-pf-additional-info-item {
-    display: flex;
-  }
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked {
   text-align: center;
@@ -7266,16 +7262,12 @@ table.dataTable th:active {
 .wizard-pf-steps-indicator {
   font-size: 16px;
   display: inline-block;
+  display: flex;
   height: 120px;
   justify-content: space-around;
   list-style: none;
   padding: 38px 0 0;
   /* draw the step number in the circle */
-}
-@supports (display: flex) {
-  .wizard-pf-steps-indicator {
-    display: flex;
-  }
 }
 .wizard-pf-steps-indicator li {
   counter-increment: section;
