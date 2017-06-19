@@ -18,6 +18,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-css-count": "^0.3.0",
     "grunt-jekyll": "^0.4.2",
+    "grunt-run": "^0.6.0",
     "matchdep": "~0.3.0",
     "nsp": "^2.6.1",
     "patternfly-eng-release": "~3.25.0"
