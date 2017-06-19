@@ -99,6 +99,7 @@ module.exports = function (grunt) {
             "less/",
             "node_modules/"
           ],
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'dist/css/rcue.css.map',
@@ -114,6 +115,7 @@ module.exports = function (grunt) {
             "less/",
             "node_modules/"
           ],
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'dist/css/rcue-additions.css.map',
