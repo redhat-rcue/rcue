@@ -1,12 +1,12 @@
-# [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) reference implementation
+# [Red Hat Common User Experience (RCUE)](https://redhat-rcue.github.io/) reference implementation
 
-The [Red Hat Common User Experience (RCUE)](http://rcue-uxd.itos.redhat.com/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
+The [Red Hat Common User Experience (RCUE)](https://redhat-rcue.github.io/) project was created to promote design commonality across all of Red Hat’s Enterprise product offerings.
 
 This reference implementation of RCUE is based on [PatternFly](https://www.patternfly.org/) and [Bootstrap v3](http://getbootstrap.com/).  Think of RCUE as a "skinned" version of Bootstrap with additional components and customizations.  For information on how to quickly get started using RCUE, see the [Quick Start Guide](QUICKSTART.md).
 
 ## Dependencies
 
-RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install NPM Dependencies".  And make sure you keep them updated (see "Keeping NPM Depedencies Updated").
+RCUE includes a number of dependencies that are not committed to this repository.  To add them, see "Install NPM Dependencies".  And make sure you keep them updated (see "Keeping NPM Dependencies Updated").
 
 ## Development
 
@@ -105,7 +105,7 @@ git push && git push --tags
 
 ## Documentation
 
-See [http://rcue-uxd.itos.redhat.com/](http://rcue-uxd.itos.redhat.com/), [https://www.patternfly.org/](https://www.patternfly.org/), and [http://getbootstrap.com/](http://getbootstrap.com/).
+See [https://redhat-rcue.github.io/](https://redhat-rcue.github.io/), [https://www.patternfly.org/](https://www.patternfly.org/), and [http://getbootstrap.com/](http://getbootstrap.com/).
 
 ### Browser and Device Support
 
