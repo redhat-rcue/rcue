@@ -61,11 +61,19 @@
     <ul class="nav navbar-nav navbar-utility">
       <li class="drawer-pf-trigger dropdown">
         <a class="nav-item-iconic drawer-pf-trigger-icon">
-          <span class="fa fa-bell" title="Notifications"></span><!-- In case of all notifications read, the icon should be fa-bell-o -->
+          <span class="fa fa-bell" title="Notifications"></span>
+          <span class="badge"> </span><!-- in order to show the empty badge this requires a space, otherwise add a value -->
         </a>
       </li>
-      <li>
-        <a href="#">Status</a>
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -115,7 +123,8 @@
     </ul>
     <div class="drawer-pf hide drawer-pf-notifications-non-clickable">
   <div class="drawer-pf-title">
-    <a class="drawer-pf-toggle-expand"></a>
+    <a class="drawer-pf-toggle-expand fa fa-angle-double-left"></a>
+    <a  class="drawer-pf-close pficon pficon-close"></a>
     <h3 class="text-center">Notifications Drawer</h3>
   </div>
   <div class="panel-group" id="notification-drawer-accordion">
@@ -228,8 +237,22 @@
 </div>
 
         </div>
+        <div class="blank-slate-pf hidden">
+          <div class="blank-slate-pf-icon">
+            <span class="pficon-info"></span>
+          </div>
+          <h1>There are no notifications to display.</h1>
+        </div>
         <div class="drawer-pf-action">
-          <button class="btn btn-link btn-block">Mark All Read</button>
+          <div class="drawer-pf-action-link" data-toggle="mark-all-read">
+            <button class="btn btn-link">Mark All Read</button>
+          </div>
+          <div class="drawer-pf-action-link" data-toggle="clear-all">
+            <button class="btn btn-link">
+              <span class="pficon pficon-close"></span>
+              Clear All
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -539,8 +562,22 @@
             <span class="spinner spinner-xs spinner-inline"></span> Loading More
           </div>
         </div>
+        <div class="blank-slate-pf hidden">
+          <div class="blank-slate-pf-icon">
+            <span class="pficon-info"></span>
+          </div>
+          <h1>There are no notifications to display.</h1>
+        </div>
         <div class="drawer-pf-action">
-          <button class="btn btn-link btn-block">Mark All Read</button>
+          <div class="drawer-pf-action-link" data-toggle="mark-all-read">
+            <button class="btn btn-link">Mark All Read</button>
+          </div>
+          <div class="drawer-pf-action-link" data-toggle="clear-all">
+            <button class="btn btn-link">
+              <span class="pficon pficon-close"></span>
+              Clear All
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -847,8 +884,22 @@
 </div>
 
         </div>
+        <div class="blank-slate-pf hidden">
+          <div class="blank-slate-pf-icon">
+            <span class="pficon-info"></span>
+          </div>
+          <h1>There are no notifications to display.</h1>
+        </div>
         <div class="drawer-pf-action">
-          <button class="btn btn-link btn-block">Mark All Read</button>
+          <div class="drawer-pf-action-link" data-toggle="mark-all-read">
+            <button class="btn btn-link">Mark All Read</button>
+          </div>
+          <div class="drawer-pf-action-link" data-toggle="clear-all">
+            <button class="btn btn-link">
+              <span class="pficon pficon-close"></span>
+              Clear All
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -856,6 +907,9 @@
 </div>
 <script>
   $(document).ready(function() {
+    // Initialize to unread notifications
+    // TODO: add badge for unread notifications
+
     // Show/Hide Notifications Drawer
     $('.drawer-pf-trigger').click(function() {
       var $drawer = $('.drawer-pf');
@@ -876,6 +930,12 @@
         $drawer.addClass('hide');
       }
     });
+    $('.drawer-pf-close').click(function() {
+      var $drawer = $('.drawer-pf');
+
+      $('.drawer-pf-trigger').removeClass('open');
+      $drawer.addClass('hide');
+    });
     $('.drawer-pf-toggle-expand').click(function() {
       var $drawer = $('.drawer-pf');
       var $drawerNotifications = $drawer.find('.drawer-pf-notification');
@@ -889,12 +949,48 @@
       }
     });
 
-    // Mark All Read
+    // Mark All Read / Clear All
     $('.panel-collapse').each(function (index, panel) {
       var $panel = $(panel);
-      $panel.on('click', '.drawer-pf-action .btn', function() {
+      var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+      $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+
+      if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+        // TODO: remove badge for unread indicator
+      }
+
+      $panel.on('click', '.drawer-pf-action [data-toggle="mark-all-read"] .btn', function() {
         $panel.find('.unread').removeClass('unread');
+        $panel.find('.drawer-pf-action [data-toggle="mark-all-read"]').remove();
         $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          $('.drawer-pf-trigger').removeClass('unread');
+        }
+      });
+      $panel.on('click', '.drawer-pf-action [data-toggle="clear-all"] .btn', function() {
+        $panel.find('.panel-body .drawer-pf-notification').remove();
+        $panel.find('.drawer-pf-action').remove();
+        $panel.find('.blank-slate-pf').removeClass('hidden');
+        $panel.find('.drawer-pf-loading').addClass('hidden');
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          // TODO: remove badge for unread indicator
+        }
+      });
+
+      $panel.find('.drawer-pf-notification').each(function (index, notification) {
+        var $notification = $(notification);
+        $notification.on('click', '.drawer-pf-notification-content', function() {
+          $notification.removeClass('unread');
+          var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+          $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+          if (unreadCount === 0) {
+            $panel.find('.drawer-pf-action [data-toggle="mark-all-read"]').remove();
+            if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+              // TODO: remove badge for unread indicator
+            }
+          }
+        });
       });
     });
 
@@ -924,6 +1020,7 @@
     </ul>
   </div>
 </nav>
+
 
 <div class="container-fluid container-cards-pf">
       <div class="row row-cards-pf">
