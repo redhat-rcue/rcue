@@ -63,6 +63,8 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'node_modules/patternfly/dist/fonts/', src: ['**'], dest: 'dist/fonts/'},
           // copy PatternFly less files
           {expand: true, cwd: 'node_modules/patternfly/less/', src: ['**'], dest: 'less/lib/patternfly/'},
+          // copy PatternFly images
+          {expand: true, cwd: 'node_modules/patternfly/dist/img/', src: ['**'], dest: 'dist/img'},
         ],
       },
     },
