@@ -1,6 +1,6 @@
 {
   "name": "rcue",
-  "version": "3.29.6",
+  "version": "3.30.2",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -17,6 +17,12 @@
       "version": "1.10.0",
       "from": "bootstrap-select@>=1.10.0 <1.11.0",
       "resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.10.0.tgz",
+      "optional": true
+    },
+    "bootstrap-slider": {
+      "version": "9.10.0",
+      "from": "bootstrap-slider@>=9.9.0 <10.0.0",
+      "resolved": "https://registry.npmjs.org/bootstrap-slider/-/bootstrap-slider-9.10.0.tgz",
       "optional": true
     },
     "bootstrap-switch": {
@@ -67,9 +73,9 @@
       "optional": true
     },
     "patternfly": {
-      "version": "3.29.6",
-      "from": "patternfly@3.29.6",
-      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.29.6.tgz",
+      "version": "3.30.2",
+      "from": "patternfly@3.30.2",
+      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.30.2.tgz",
       "dependencies": {
         "bootstrap": {
           "version": "3.3.7",
@@ -86,6 +92,12 @@
           "version": "1.12.4",
           "from": "bootstrap-select@>=1.12.2 <2.0.0",
           "resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.4.tgz",
+          "optional": true
+        },
+        "bootstrap-slider": {
+          "version": "9.10.0",
+          "from": "bootstrap-slider@>=9.9.0 <10.0.0",
+          "resolved": "https://registry.npmjs.org/bootstrap-slider/-/bootstrap-slider-9.10.0.tgz",
           "optional": true
         },
         "bootstrap-switch": {
