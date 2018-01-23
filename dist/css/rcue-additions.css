@@ -5845,7 +5845,7 @@ a.disabled {
   background-size: auto 100%;
   border: none;
   border-radius: 0;
-  border-top: 0 solid #39a5dc;
+  border-top: 0 solid #cc0000;
   margin-bottom: 0;
 }
 .navbar-pf-alt .infotip.bottom-right .arrow {
@@ -5964,7 +5964,7 @@ a.disabled {
   background-color: #1d1d1d;
   border: none;
   border-radius: 0;
-  border-top: 2px solid #39a5dc;
+  border-top: 2px solid #cc0000;
   margin-bottom: 0;
 }
 .navbar-pf-vertical .infotip.bottom-right .arrow {
