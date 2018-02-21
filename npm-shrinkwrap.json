@@ -1,6 +1,6 @@
 {
   "name": "rcue",
-  "version": "3.38.0",
+  "version": "3.40.0",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -38,9 +38,9 @@
       "optional": true
     },
     "c3": {
-      "version": "0.4.18",
+      "version": "0.4.21",
       "from": "c3@>=0.4.11 <0.5.0",
-      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.18.tgz",
+      "resolved": "https://registry.npmjs.org/c3/-/c3-0.4.21.tgz",
       "optional": true
     },
     "d3": {
@@ -124,9 +124,9 @@
       "optional": true
     },
     "patternfly": {
-      "version": "3.38.0",
-      "from": "patternfly@3.38.0",
-      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.38.0.tgz",
+      "version": "3.40.0",
+      "from": "patternfly@3.40.0",
+      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.40.0.tgz",
       "dependencies": {
         "bootstrap": {
           "version": "3.3.7",
