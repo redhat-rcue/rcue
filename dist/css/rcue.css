@@ -9918,7 +9918,7 @@ fieldset[disabled] .pager li > span.active {
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #8b8d8f;
-  cursor: default;
+  cursor: not-allowed;
 }
 .pager .next > a > .i,
 .pager .next > span > .i {
@@ -10065,7 +10065,7 @@ fieldset[disabled] .pagination > li > span.active {
 .pagination > .disabled > a:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  cursor: default;
+  cursor: not-allowed;
   background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
   background-image: -o-linear-gradient(top, #fafafa 0%, #ededed 100%);
   background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
