@@ -1,6 +1,6 @@
 {
   "name": "rcue",
-  "version": "3.43.0",
+  "version": "3.44.0",
   "dependencies": {
     "bootstrap": {
       "version": "3.3.7",
@@ -124,9 +124,9 @@
       "optional": true
     },
     "patternfly": {
-      "version": "3.43.0",
-      "from": "patternfly@3.43.0",
-      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.43.0.tgz",
+      "version": "3.44.0",
+      "from": "patternfly@3.44.0",
+      "resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.44.0.tgz",
       "dependencies": {
         "bootstrap": {
           "version": "3.3.7",
