@@ -1,13 +1,13 @@
 {
   "name": "rcue",
-  "version": "3.46.4",
+  "version": "3.47.0",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap": "~3.3.7",
     "font-awesome": "^4.7.0",
     "jquery": "~3.2.1",
-    "patternfly": "3.46.3"
+    "patternfly": "3.47.0"
   },
   "devDependencies": {
     "connect-livereload": "~0.5.4",
